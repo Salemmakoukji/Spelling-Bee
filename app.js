@@ -110,7 +110,7 @@ function checkWord() {
 
     // Hide "Submit" button and show "Next Word" button
     checkWordBtn.style.display = 'none';
-    nextWordBtn.style.display = 'inline-block';
+    nextWordBtn.style.display = 'inline-block'; // Show "Next Word" button
 
     // Disable buttons until next word
     playDefinitionBtn.disabled = true;
@@ -136,7 +136,7 @@ function saveUserData() {
 
 // Proceed to the next word
 nextWordBtn.addEventListener('click', () => {
-    // Here, you can increment the level or repeat the same level
+    // Select the next word (you can add logic here to choose different levels or criteria)
     selectWord(1); // For now, it keeps selecting from level 1
 });
 
