@@ -4,6 +4,7 @@ let words = []; // Will store words from the JSON
 let currentWord = {};
 let userName = "";
 let score = 0; // Initialize score
+let userScores = []; // To store user data
 
 // Fetch words from external JSON file
 fetch('WordsData.json')
@@ -27,7 +28,8 @@ const nameForm = document.getElementById('nameForm');
 const gameArea = document.getElementById('gameArea');
 const welcomeMessage = document.getElementById('welcomeMessage');
 const startGameBtn = document.getElementById('startGame');
-const scoreElement = document.getElementById('score'); // Score DOM element
+const scoreElement = document.getElementById('score');
+const nextWordBtn = document.getElementById('nextWord'); // Next word button
 
 // Start game after user enters their name
 startGameBtn.addEventListener('click', () => {
@@ -58,6 +60,10 @@ function selectWord(level) {
     // Clear previous user input and feedback
     userInput.value = "";
     feedback.textContent = "";
+
+    // Hide the "Next Word" button until they submit their answer
+    nextWordBtn.style.display = 'none';
+    checkWordBtn.style.display = 'inline-block'; // Show "Submit" button
 }
 
 // Play the word using Text-to-Speech API
@@ -97,10 +103,14 @@ function checkWord() {
         feedback.style.color = 'green';
         updateScore(10); // Increase score by 10 for correct answer
     } else {
-        feedback.textContent = `Incorrect. The correct word is: ${currentWord.word}`;
+        feedback.textContent = `Wrong! The correct word is: ${currentWord.word}`;
         feedback.style.color = 'red';
         updateScore(-5); // Decrease score by 5 for incorrect answer
     }
+
+    // Hide "Submit" button and show "Next Word" button
+    checkWordBtn.style.display = 'none';
+    nextWordBtn.style.display = 'inline-block';
 
     // Disable buttons until next word
     playDefinitionBtn.disabled = true;
@@ -112,6 +122,23 @@ function updateScore(points) {
     score += points;
     scoreElement.textContent = score;
 }
+
+// Store the user’s name and score in a JSON-like object
+function saveUserData() {
+    const userData = {
+        username: userName,
+        points: score
+    };
+
+    userScores.push(userData); // Store it in an array (simulating JSON storage)
+    console.log("User data saved:", userScores);
+}
+
+// Proceed to the next word
+nextWordBtn.addEventListener('click', () => {
+    // Here, you can increment the level or repeat the same level
+    selectWord(1); // For now, it keeps selecting from level 1
+});
 
 // Event listeners
 playWordBtn.addEventListener('click', playWord);
