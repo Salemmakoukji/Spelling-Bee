@@ -52,8 +52,8 @@ function selectWord(level) {
     currentWord = wordsAtLevel[randomIndex];
 
     // Display definition and sentence
-    //definition.textContent = `Definition: ${currentWord.definition}`;
-    //sentence.textContent = `Sentence: ${currentWord.sentence}`;
+    definition.textContent = `Definition: ${currentWord.definition}`;
+    sentence.textContent = `Sentence: ${currentWord.sentence}`;
 
     // Enable buttons for the next word, reset their state
     playDefinitionBtn.disabled = false;
