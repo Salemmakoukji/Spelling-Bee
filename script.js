@@ -4,7 +4,7 @@ let words = [];
 let currentWord = {};
 let score = 0;
 
-fetch('words.json')
+fetch('Words.json')
     .then(response => response.json())
     .then(data => {
         words = data;
@@ -43,20 +43,20 @@ document.getElementById('nextWord').addEventListener('click', loadNextWord);
 document.getElementById('downloadScore').addEventListener('click', downloadScore);
 
 function playWord() {
-    // play the word audio
+    speakText(currentWord.word);
     enableWordOptions();
 }
 
 function replayWord() {
-    // replay the word audio
+    speakText(currentWord.word);
 }
 
 function playDefinition() {
-    // play the word definition
+    speakText(currentWord.definition);
 }
 
 function playSentence() {
-    // play the word in a sentence
+    speakText(currentWord.sentence);
 }
 
 function enableWordOptions() {
@@ -87,4 +87,9 @@ function downloadScore() {
     document.body.appendChild(downloadAnchorNode);
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
+}
+
+function speakText(text) {
+    const speech = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(speech);
 }
