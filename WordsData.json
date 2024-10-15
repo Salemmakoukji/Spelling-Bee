@@ -1,125 +1,716 @@
 [
-    {"word_id": 1, "word": "apple", "definition": "A round fruit with red or green skin.", "sentence": "She ate a juicy apple for lunch.", "level": 1},
-    {"word_id": 2, "word": "book", "definition": "A set of written or printed pages bound together.", "sentence": "He read an interesting book.", "level": 1},
-    {"word_id": 3, "word": "cat", "definition": "A small domesticated carnivorous mammal.", "sentence": "The cat slept on the couch.", "level": 1},
-    {"word_id": 4, "word": "dog", "definition": "A domesticated carnivorous mammal with fur.", "sentence": "The dog barked at the stranger.", "level": 1},
-    {"word_id": 5, "word": "fish", "definition": "An aquatic animal that lives in water.", "sentence": "They caught a big fish in the lake.", "level": 1},
-    
-    {"word_id": 6, "word": "happy", "definition": "Feeling or showing pleasure or contentment.", "sentence": "She was happy with the surprise.", "level": 1},
-    {"word_id": 7, "word": "house", "definition": "A building for human habitation.", "sentence": "They moved into a new house.", "level": 1},
-    {"word_id": 8, "word": "juice", "definition": "The liquid extracted from fruits or vegetables.", "sentence": "He drank orange juice in the morning.", "level": 1},
-    {"word_id": 9, "word": "kite", "definition": "A toy flown in the wind at the end of a string.", "sentence": "She flew her kite in the park.", "level": 1},
-    {"word_id": 10, "word": "lamp", "definition": "A device that provides light.", "sentence": "He turned on the lamp to read.", "level": 1},
-    
-    {"word_id": 11, "word": "mountain", "definition": "A large natural elevation of the earth's surface.", "sentence": "They climbed the steep mountain.", "level": 2},
-    {"word_id": 12, "word": "ocean", "definition": "A large body of salt water.", "sentence": "The ship sailed across the ocean.", "level": 2},
-    {"word_id": 13, "word": "pencil", "definition": "An instrument for writing or drawing.", "sentence": "She wrote the note with a pencil.", "level": 2},
-    {"word_id": 14, "word": "quilt", "definition": "A warm bed cover made by stitching together layers of fabric.", "sentence": "Her grandmother made a quilt.", "level": 2},
-    {"word_id": 15, "word": "rabbit", "definition": "A small herbivorous mammal with long ears.", "sentence": "The rabbit hopped across the field.", "level": 2},
-    
-    {"word_id": 16, "word": "science", "definition": "The study of the natural world through observation and experiment.", "sentence": "He is fascinated by science.", "level": 2},
-    {"word_id": 17, "word": "telescope", "definition": "An optical instrument designed to make distant objects appear closer.", "sentence": "They used a telescope to see the stars.", "level": 2},
-    {"word_id": 18, "word": "umbrella", "definition": "A device for protection against the rain or sun.", "sentence": "She opened her umbrella when it started to rain.", "level": 2},
-    {"word_id": 19, "word": "vacation", "definition": "An extended period of recreation away from home.", "sentence": "They went on a vacation to the beach.", "level": 2},
-    {"word_id": 20, "word": "window", "definition": "An opening in the wall or roof of a building for light or air.", "sentence": "She looked out the window at the garden.", "level": 2},
-    
-    {"word_id": 21, "word": "adventure", "definition": "An unusual and exciting experience.", "sentence": "Their adventure in the jungle was thrilling.", "level": 3},
-    {"word_id": 22, "word": "bicycle", "definition": "A vehicle with two wheels powered by pedaling.", "sentence": "He rode his bicycle to school.", "level": 3},
-    {"word_id": 23, "word": "companion", "definition": "A person or animal with whom one spends a lot of time.", "sentence": "The dog was his faithful companion.", "level": 3},
-    {"word_id": 24, "word": "delicate", "definition": "Easily broken or damaged.", "sentence": "The vase was delicate and fragile.", "level": 3},
-    {"word_id": 25, "word": "electricity", "definition": "A form of energy resulting from charged particles.", "sentence": "The storm knocked out the electricity.", "level": 3},
-    
-    {"word_id": 26, "word": "fascinate", "definition": "To attract and hold the attention of.", "sentence": "Dinosaurs fascinate young children.", "level": 3},
-    {"word_id": 27, "word": "glorious", "definition": "Having, worthy of, or bringing fame or admiration.", "sentence": "The sunset was a glorious sight.", "level": 3},
-    {"word_id": 28, "word": "horizon", "definition": "The line at which the earth’s surface and the sky appear to meet.", "sentence": "They watched the sun set over the horizon.", "level": 3},
-    {"word_id": 29, "word": "independent", "definition": "Free from outside control; not subject to another's authority.", "sentence": "She became independent at a young age.", "level": 3},
-    {"word_id": 30, "word": "jubilant", "definition": "Feeling or expressing great happiness.", "sentence": "They were jubilant after winning the championship.", "level": 3},
-    
-    {"word_id": 31, "word": "knowledge", "definition": "Information, understanding, or skill gained through experience or education.", "sentence": "He has a vast knowledge of history.", "level": 3},
-    {"word_id": 32, "word": "landscape", "definition": "All the visible features of an area of land.", "sentence": "The landscape was beautiful and serene.", "level": 3},
-    {"word_id": 33, "word": "mysterious", "definition": "Difficult or impossible to understand, explain, or identify.", "sentence": "The house had a mysterious atmosphere.", "level": 3},
-    {"word_id": 34, "word": "nurture", "definition": "Care for and encourage the growth or development of.", "sentence": "Parents nurture their children with love.", "level": 3},
-    {"word_id": 35, "word": "optimistic", "definition": "Hopeful and confident about the future.", "sentence": "She remained optimistic about the results.", "level": 3},
-    
-    {"word_id": 36, "word": "patience", "definition": "The ability to accept delay without getting angry.", "sentence": "He showed great patience while waiting.", "level": 3},
-    {"word_id": 37, "word": "quarantine", "definition": "A state of isolation to prevent the spread of disease.", "sentence": "They were placed in quarantine after traveling.", "level": 3},
-    {"word_id": 38, "word": "radiant", "definition": "Sending out light; shining or glowing brightly.", "sentence": "Her smile was radiant.", "level": 3},
-    {"word_id": 39, "word": "serenity", "definition": "The state of being calm, peaceful, and untroubled.", "sentence": "He found serenity by the lake.", "level": 3},
-    {"word_id": 40, "word": "turbulent", "definition": "Characterized by conflict, disorder, or confusion.", "sentence": "The turbulent sea made sailing difficult.", "level": 3},
-    
-    {"word_id": 41, "word": "unique", "definition": "Being the only one of its kind.", "sentence": "Her style is very unique and creative.", "level": 3},
-    {"word_id": 42, "word": "vulnerable", "definition": "Exposed to the possibility of being harmed.", "sentence": "Young animals are vulnerable to predators.", "level": 3},
-    {"word_id": 43, "word": "wilderness", "definition": "An uncultivated, uninhabited, and inhospitable region.", "sentence": "They camped in the vast wilderness.", "level": 3},
-    {"word_id": 44, "word": "xenophobia", "definition": "Dislike of or prejudice against people from other countries.", "sentence": "The rise of xenophobia was concerning.", "level": 3},
-    {"word_id": 45, "word": "yearn", "definition": "To have an intense feeling of longing for something.", "sentence": "She yearned for adventure and new experiences.", "level": 3},
-    
-    {"word_id": 46, "word": "zealous", "definition": "Showing great enthusiasm in pursuit of a cause.", "sentence": "He was zealous in his efforts to complete the project.", "level": 3},
-    {"word_id": 47, "word": "benevolent", "definition": "Well-meaning and kindly.", "sentence": "The charity received a benevolent donation.", "level": 3},
-    {"word_id": 48, "word": "cacophony", "definition": "A harsh, discordant mixture of sounds.", "sentence": "The streets were filled with the cacophony of horns.", "level": 3},
-    {"word_id": 49, "word": "diligent", "definition": "Having or showing care in one's work.", "sentence": "She was diligent in completing her assignments.", "level": 3},
-    {"word_id": 50, "word": "empathy", "definition": "The ability to understand and share the feelings of others.", "sentence": "Her empathy made her a great friend.", "level": 3},
-
-        {"word_id": 51, "word": "affection", "definition": "A gentle feeling of fondness or liking.", "sentence": "She showed great affection towards her family.", "level": 1},
-        {"word_id": 52, "word": "balloon", "definition": "A small rubber bag that is filled with air or gas.", "sentence": "The child let go of the balloon.", "level": 1},
-        {"word_id": 53, "word": "circle", "definition": "A round plane figure whose boundary is equidistant from the center.", "sentence": "She drew a perfect circle.", "level": 1},
-        {"word_id": 54, "word": "dinosaur", "definition": "A large extinct reptile from the Mesozoic era.", "sentence": "Children love reading about dinosaurs.", "level": 1},
-        {"word_id": 55, "word": "elephant", "definition": "A large mammal with a trunk, native to Africa and Asia.", "sentence": "The elephant is the largest land animal.", "level": 1},
-        
-        {"word_id": 56, "word": "friendship", "definition": "The state of being friends.", "sentence": "Their friendship lasted many years.", "level": 1},
-        {"word_id": 57, "word": "garden", "definition": "A piece of ground where flowers, vegetables, or fruit are grown.", "sentence": "She planted roses in her garden.", "level": 1},
-        {"word_id": 58, "word": "honey", "definition": "A sweet, sticky substance made by bees.", "sentence": "He spread honey on his toast.", "level": 1},
-        {"word_id": 59, "word": "island", "definition": "A piece of land surrounded by water.", "sentence": "They vacationed on a tropical island.", "level": 1},
-        {"word_id": 60, "word": "jungle", "definition": "A dense forest in tropical regions.", "sentence": "The explorers ventured deep into the jungle.", "level": 1},
-        
-        {"word_id": 61, "word": "kingdom", "definition": "A country, state, or territory ruled by a king or queen.", "sentence": "The kingdom was vast and prosperous.", "level": 2},
-        {"word_id": 62, "word": "language", "definition": "The method of human communication, either spoken or written.", "sentence": "English is a global language.", "level": 2},
-        {"word_id": 63, "word": "magnet", "definition": "An object that attracts iron and some other materials.", "sentence": "She used a magnet to pick up the nails.", "level": 2},
-        {"word_id": 64, "word": "neighborhood", "definition": "A district or area within a town or city.", "sentence": "They lived in a quiet neighborhood.", "level": 2},
-        {"word_id": 65, "word": "octopus", "definition": "A sea animal with eight arms.", "sentence": "The octopus hid between the rocks.", "level": 2},
-        
-        {"word_id": 66, "word": "parachute", "definition": "A device used to slow the descent of a person or object through the air.", "sentence": "He deployed his parachute as he jumped.", "level": 2},
-        {"word_id": 67, "word": "quiet", "definition": "Making little or no noise.", "sentence": "The library was very quiet.", "level": 2},
-        {"word_id": 68, "word": "rescue", "definition": "To save someone from a dangerous or distressing situation.", "sentence": "The firefighters performed a daring rescue.", "level": 2},
-        {"word_id": 69, "word": "society", "definition": "A group of individuals involved in persistent social interaction.", "sentence": "We live in a complex society.", "level": 2},
-        {"word_id": 70, "word": "treasure", "definition": "A quantity of valuable objects.", "sentence": "The pirates buried their treasure on the island.", "level": 2},
-        
-        {"word_id": 71, "word": "unique", "definition": "Being the only one of its kind.", "sentence": "Each snowflake is unique.", "level": 2},
-        {"word_id": 72, "word": "volcano", "definition": "A mountain or hill having a crater through which lava erupts.", "sentence": "The volcano erupted after centuries of dormancy.", "level": 2},
-        {"word_id": 73, "word": "weather", "definition": "The state of the atmosphere at a place and time.", "sentence": "The weather was rainy today.", "level": 2},
-        {"word_id": 74, "word": "xylophone", "definition": "A musical instrument with wooden bars.", "sentence": "The musician played a tune on the xylophone.", "level": 2},
-        {"word_id": 75, "word": "yacht", "definition": "A medium-sized boat used for pleasure cruising or racing.", "sentence": "They sailed the yacht across the bay.", "level": 2},
-        
-        {"word_id": 76, "word": "zeal", "definition": "Great energy or enthusiasm in pursuit of a cause.", "sentence": "She approached the project with zeal.", "level": 3},
-        {"word_id": 77, "word": "abundant", "definition": "Existing or available in large quantities.", "sentence": "The forest was abundant with wildlife.", "level": 3},
-        {"word_id": 78, "word": "benevolent", "definition": "Well-meaning and kindly.", "sentence": "The organization was known for its benevolent acts.", "level": 3},
-        {"word_id": 79, "word": "courageous", "definition": "Not deterred by danger or pain.", "sentence": "The firefighter was courageous in the rescue.", "level": 3},
-        {"word_id": 80, "word": "dedicate", "definition": "To devote time and effort to a particular task or purpose.", "sentence": "She dedicated herself to her studies.", "level": 3},
-        
-        {"word_id": 81, "word": "effortless", "definition": "Requiring no physical or mental exertion.", "sentence": "She made the task look effortless.", "level": 3},
-        {"word_id": 82, "word": "fortunate", "definition": "Favored by or involving good luck.", "sentence": "He was fortunate to avoid injury.", "level": 3},
-        {"word_id": 83, "word": "genuine", "definition": "Truly what something is said to be.", "sentence": "Her smile was genuine.", "level": 3},
-        {"word_id": 84, "word": "heroic", "definition": "Having the characteristics of a hero or heroine.", "sentence": "His actions were nothing short of heroic.", "level": 3},
-        {"word_id": 85, "word": "integrity", "definition": "The quality of being honest and having strong moral principles.", "sentence": "She acted with great integrity.", "level": 3},
-        
-        {"word_id": 86, "word": "journey", "definition": "An act of traveling from one place to another.", "sentence": "They embarked on a long journey.", "level": 3},
-        {"word_id": 87, "word": "knowledgeable", "definition": "Intelligent and well informed.", "sentence": "He was very knowledgeable about history.", "level": 3},
-        {"word_id": 88, "word": "legend", "definition": "A traditional story sometimes popularly regarded as historical.", "sentence": "He told them the legend of the hidden treasure.", "level": 3},
-        {"word_id": 89, "word": "magnitude", "definition": "The great size or extent of something.", "sentence": "They did not realize the magnitude of the problem.", "level": 3},
-        {"word_id": 90, "word": "noble", "definition": "Having or showing fine personal qualities or high moral principles.", "sentence": "She made a noble gesture to help.", "level": 3},
-        
-        {"word_id": 91, "word": "optimism", "definition": "Hopefulness and confidence about the future.", "sentence": "Her optimism inspired the whole team.", "level": 3},
-        {"word_id": 92, "word": "persistence", "definition": "Firm continuance in a course of action in spite of difficulty.", "sentence": "His persistence led to eventual success.", "level": 3},
-        {"word_id": 93, "word": "quaint", "definition": "Attractively unusual or old-fashioned.", "sentence": "The cottage had a quaint charm.", "level": 3},
-        {"word_id": 94, "word": "resilient", "definition": "Able to withstand or recover quickly from difficult conditions.", "sentence": "She was resilient in the face of adversity.", "level": 3},
-        {"word_id": 95, "word": "sophisticated", "definition": "Having, revealing, or involving great knowledge or culture.", "sentence": "The machine was a sophisticated piece of technology.", "level": 3},
-        
-        {"word_id": 96, "word": "tenacious", "definition": "Tending to keep a firm hold of something.", "sentence": "She was tenacious in pursuing her dreams.", "level": 3},
-        {"word_id": 97, "word": "uplifting", "definition": "Morally or spiritually elevating.", "sentence": "The speech was uplifting and inspiring.", "level": 3},
-        {"word_id": 98, "word": "vivid", "definition": "Producing powerful feelings or strong, clear images in the mind.", "sentence": "Her description was vivid and detailed.", "level": 3},
-        {"word_id": 99, "word": "whimsical", "definition": "Playfully quaint or fanciful.", "sentence": "The illustrations in the book were whimsical.", "level": 3},
-        {"word_id": 100, "word": "xenial", "definition": "Relating to hospitality between host and guest.", "sentence": "The villagers were known for their xenial customs.", "level": 3},
-        
-        {"word_id": 101, "word": "yonder", "definition": "At some distance in the direction indicated.", "sentence": "They looked yonder towards the hills.", "level": 3},
-        {"word_id": 102, "word": "zephyr", "definition": "A gentle, mild breeze.", "sentence": "The zephyr blew gently through the trees.", "level": 3}
-    ]
-    
+    {
+        "word_id": 1,
+        "word": "apple",
+        "definition": "A round fruit with red or green skin.",
+        "sentence": "She ate a juicy apple for lunch.",
+        "level": 1
+    },
+    {
+        "word_id": 2,
+        "word": "book",
+        "definition": "A set of written or printed pages bound together.",
+        "sentence": "He read an interesting book.",
+        "level": 1
+    },
+    {
+        "word_id": 3,
+        "word": "cat",
+        "definition": "A small domesticated carnivorous mammal.",
+        "sentence": "The cat slept on the couch.",
+        "level": 1
+    },
+    {
+        "word_id": 4,
+        "word": "dog",
+        "definition": "A domesticated carnivorous mammal with fur.",
+        "sentence": "The dog barked at the stranger.",
+        "level": 1
+    },
+    {
+        "word_id": 5,
+        "word": "fish",
+        "definition": "An aquatic animal that lives in water.",
+        "sentence": "They caught a big fish in the lake.",
+        "level": 1
+    },
+    {
+        "word_id": 6,
+        "word": "happy",
+        "definition": "Feeling or showing pleasure or contentment.",
+        "sentence": "She was happy with the surprise.",
+        "level": 1
+    },
+    {
+        "word_id": 7,
+        "word": "house",
+        "definition": "A building for human habitation.",
+        "sentence": "They moved into a new house.",
+        "level": 1
+    },
+    {
+        "word_id": 8,
+        "word": "juice",
+        "definition": "The liquid extracted from fruits or vegetables.",
+        "sentence": "He drank orange juice in the morning.",
+        "level": 1
+    },
+    {
+        "word_id": 9,
+        "word": "kite",
+        "definition": "A toy flown in the wind at the end of a string.",
+        "sentence": "She flew her kite in the park.",
+        "level": 1
+    },
+    {
+        "word_id": 10,
+        "word": "lamp",
+        "definition": "A device that provides light.",
+        "sentence": "He turned on the lamp to read.",
+        "level": 1
+    },
+    {
+        "word_id": 11,
+        "word": "mountain",
+        "definition": "A large natural elevation of the earth's surface.",
+        "sentence": "They climbed the steep mountain.",
+        "level": 2
+    },
+    {
+        "word_id": 12,
+        "word": "ocean",
+        "definition": "A large body of salt water.",
+        "sentence": "The ship sailed across the ocean.",
+        "level": 2
+    },
+    {
+        "word_id": 13,
+        "word": "pencil",
+        "definition": "An instrument for writing or drawing.",
+        "sentence": "She wrote the note with a pencil.",
+        "level": 2
+    },
+    {
+        "word_id": 14,
+        "word": "quilt",
+        "definition": "A warm bed cover made by stitching together layers of fabric.",
+        "sentence": "Her grandmother made a quilt.",
+        "level": 2
+    },
+    {
+        "word_id": 15,
+        "word": "rabbit",
+        "definition": "A small herbivorous mammal with long ears.",
+        "sentence": "The rabbit hopped across the field.",
+        "level": 2
+    },
+    {
+        "word_id": 16,
+        "word": "science",
+        "definition": "The study of the natural world through observation and experiment.",
+        "sentence": "He is fascinated by science.",
+        "level": 2
+    },
+    {
+        "word_id": 17,
+        "word": "telescope",
+        "definition": "An optical instrument designed to make distant objects appear closer.",
+        "sentence": "They used a telescope to see the stars.",
+        "level": 2
+    },
+    {
+        "word_id": 18,
+        "word": "umbrella",
+        "definition": "A device for protection against the rain or sun.",
+        "sentence": "She opened her umbrella when it started to rain.",
+        "level": 2
+    },
+    {
+        "word_id": 19,
+        "word": "vacation",
+        "definition": "An extended period of recreation away from home.",
+        "sentence": "They went on a vacation to the beach.",
+        "level": 2
+    },
+    {
+        "word_id": 20,
+        "word": "window",
+        "definition": "An opening in the wall or roof of a building for light or air.",
+        "sentence": "She looked out the window at the garden.",
+        "level": 2
+    },
+    {
+        "word_id": 21,
+        "word": "adventure",
+        "definition": "An unusual and exciting experience.",
+        "sentence": "Their adventure in the jungle was thrilling.",
+        "level": 3
+    },
+    {
+        "word_id": 22,
+        "word": "bicycle",
+        "definition": "A vehicle with two wheels powered by pedaling.",
+        "sentence": "He rode his bicycle to school.",
+        "level": 3
+    },
+    {
+        "word_id": 23,
+        "word": "companion",
+        "definition": "A person or animal with whom one spends a lot of time.",
+        "sentence": "The dog was his faithful companion.",
+        "level": 3
+    },
+    {
+        "word_id": 24,
+        "word": "delicate",
+        "definition": "Easily broken or damaged.",
+        "sentence": "The vase was delicate and fragile.",
+        "level": 3
+    },
+    {
+        "word_id": 25,
+        "word": "electricity",
+        "definition": "A form of energy resulting from charged particles.",
+        "sentence": "The storm knocked out the electricity.",
+        "level": 3
+    },
+    {
+        "word_id": 26,
+        "word": "fascinate",
+        "definition": "To attract and hold the attention of.",
+        "sentence": "Dinosaurs fascinate young children.",
+        "level": 3
+    },
+    {
+        "word_id": 27,
+        "word": "glorious",
+        "definition": "Having, worthy of, or bringing fame or admiration.",
+        "sentence": "The sunset was a glorious sight.",
+        "level": 3
+    },
+    {
+        "word_id": 28,
+        "word": "horizon",
+        "definition": "The line at which the earth’s surface and the sky appear to meet.",
+        "sentence": "They watched the sun set over the horizon.",
+        "level": 3
+    },
+    {
+        "word_id": 29,
+        "word": "independent",
+        "definition": "Free from outside control; not subject to another's authority.",
+        "sentence": "She became independent at a young age.",
+        "level": 3
+    },
+    {
+        "word_id": 30,
+        "word": "jubilant",
+        "definition": "Feeling or expressing great happiness.",
+        "sentence": "They were jubilant after winning the championship.",
+        "level": 3
+    },
+    {
+        "word_id": 31,
+        "word": "knowledge",
+        "definition": "Information, understanding, or skill gained through experience or education.",
+        "sentence": "He has a vast knowledge of history.",
+        "level": 3
+    },
+    {
+        "word_id": 32,
+        "word": "landscape",
+        "definition": "All the visible features of an area of land.",
+        "sentence": "The landscape was beautiful and serene.",
+        "level": 3
+    },
+    {
+        "word_id": 33,
+        "word": "mysterious",
+        "definition": "Difficult or impossible to understand, explain, or identify.",
+        "sentence": "The house had a mysterious atmosphere.",
+        "level": 3
+    },
+    {
+        "word_id": 34,
+        "word": "nurture",
+        "definition": "Care for and encourage the growth or development of.",
+        "sentence": "Parents nurture their children with love.",
+        "level": 3
+    },
+    {
+        "word_id": 35,
+        "word": "optimistic",
+        "definition": "Hopeful and confident about the future.",
+        "sentence": "She remained optimistic about the results.",
+        "level": 3
+    },
+    {
+        "word_id": 36,
+        "word": "patience",
+        "definition": "The ability to accept delay without getting angry.",
+        "sentence": "He showed great patience while waiting.",
+        "level": 3
+    },
+    {
+        "word_id": 37,
+        "word": "quarantine",
+        "definition": "A state of isolation to prevent the spread of disease.",
+        "sentence": "They were placed in quarantine after traveling.",
+        "level": 3
+    },
+    {
+        "word_id": 38,
+        "word": "radiant",
+        "definition": "Sending out light; shining or glowing brightly.",
+        "sentence": "Her smile was radiant.",
+        "level": 3
+    },
+    {
+        "word_id": 39,
+        "word": "serenity",
+        "definition": "The state of being calm, peaceful, and untroubled.",
+        "sentence": "He found serenity by the lake.",
+        "level": 3
+    },
+    {
+        "word_id": 40,
+        "word": "turbulent",
+        "definition": "Characterized by conflict, disorder, or confusion.",
+        "sentence": "The turbulent sea made sailing difficult.",
+        "level": 3
+    },
+    {
+        "word_id": 41,
+        "word": "unique",
+        "definition": "Being the only one of its kind.",
+        "sentence": "Her style is very unique and creative.",
+        "level": 3
+    },
+    {
+        "word_id": 42,
+        "word": "vulnerable",
+        "definition": "Exposed to the possibility of being harmed.",
+        "sentence": "Young animals are vulnerable to predators.",
+        "level": 3
+    },
+    {
+        "word_id": 43,
+        "word": "wilderness",
+        "definition": "An uncultivated, uninhabited, and inhospitable region.",
+        "sentence": "They camped in the vast wilderness.",
+        "level": 3
+    },
+    {
+        "word_id": 44,
+        "word": "xenophobia",
+        "definition": "Dislike of or prejudice against people from other countries.",
+        "sentence": "The rise of xenophobia was concerning.",
+        "level": 3
+    },
+    {
+        "word_id": 45,
+        "word": "yearn",
+        "definition": "To have an intense feeling of longing for something.",
+        "sentence": "She yearned for adventure and new experiences.",
+        "level": 3
+    },
+    {
+        "word_id": 46,
+        "word": "zealous",
+        "definition": "Showing great enthusiasm in pursuit of a cause.",
+        "sentence": "He was zealous in his efforts to complete the project.",
+        "level": 3
+    },
+    {
+        "word_id": 47,
+        "word": "benevolent",
+        "definition": "Well-meaning and kindly.",
+        "sentence": "The charity received a benevolent donation.",
+        "level": 3
+    },
+    {
+        "word_id": 48,
+        "word": "cacophony",
+        "definition": "A harsh, discordant mixture of sounds.",
+        "sentence": "The streets were filled with the cacophony of horns.",
+        "level": 3
+    },
+    {
+        "word_id": 49,
+        "word": "diligent",
+        "definition": "Having or showing care in one's work.",
+        "sentence": "She was diligent in completing her assignments.",
+        "level": 3
+    },
+    {
+        "word_id": 50,
+        "word": "empathy",
+        "definition": "The ability to understand and share the feelings of others.",
+        "sentence": "Her empathy made her a great friend.",
+        "level": 3
+    },
+    {
+        "word_id": 51,
+        "word": "affection",
+        "definition": "A gentle feeling of fondness or liking.",
+        "sentence": "She showed great affection towards her family.",
+        "level": 1
+    },
+    {
+        "word_id": 52,
+        "word": "balloon",
+        "definition": "A small rubber bag that is filled with air or gas.",
+        "sentence": "The child let go of the balloon.",
+        "level": 1
+    },
+    {
+        "word_id": 53,
+        "word": "circle",
+        "definition": "A round plane figure whose boundary is equidistant from the center.",
+        "sentence": "She drew a perfect circle.",
+        "level": 1
+    },
+    {
+        "word_id": 54,
+        "word": "dinosaur",
+        "definition": "A large extinct reptile from the Mesozoic era.",
+        "sentence": "Children love reading about dinosaurs.",
+        "level": 1
+    },
+    {
+        "word_id": 55,
+        "word": "elephant",
+        "definition": "A large mammal with a trunk, native to Africa and Asia.",
+        "sentence": "The elephant is the largest land animal.",
+        "level": 1
+    },
+    {
+        "word_id": 56,
+        "word": "friendship",
+        "definition": "The state of being friends.",
+        "sentence": "Their friendship lasted many years.",
+        "level": 1
+    },
+    {
+        "word_id": 57,
+        "word": "garden",
+        "definition": "A piece of ground where flowers, vegetables, or fruit are grown.",
+        "sentence": "She planted roses in her garden.",
+        "level": 1
+    },
+    {
+        "word_id": 58,
+        "word": "honey",
+        "definition": "A sweet, sticky substance made by bees.",
+        "sentence": "He spread honey on his toast.",
+        "level": 1
+    },
+    {
+        "word_id": 59,
+        "word": "island",
+        "definition": "A piece of land surrounded by water.",
+        "sentence": "They vacationed on a tropical island.",
+        "level": 1
+    },
+    {
+        "word_id": 60,
+        "word": "jungle",
+        "definition": "A dense forest in tropical regions.",
+        "sentence": "The explorers ventured deep into the jungle.",
+        "level": 1
+    },
+    {
+        "word_id": 61,
+        "word": "kingdom",
+        "definition": "A country, state, or territory ruled by a king or queen.",
+        "sentence": "The kingdom was vast and prosperous.",
+        "level": 2
+    },
+    {
+        "word_id": 62,
+        "word": "language",
+        "definition": "The method of human communication, either spoken or written.",
+        "sentence": "English is a global language.",
+        "level": 2
+    },
+    {
+        "word_id": 63,
+        "word": "magnet",
+        "definition": "An object that attracts iron and some other materials.",
+        "sentence": "She used a magnet to pick up the nails.",
+        "level": 2
+    },
+    {
+        "word_id": 64,
+        "word": "neighborhood",
+        "definition": "A district or area within a town or city.",
+        "sentence": "They lived in a quiet neighborhood.",
+        "level": 2
+    },
+    {
+        "word_id": 65,
+        "word": "octopus",
+        "definition": "A sea animal with eight arms.",
+        "sentence": "The octopus hid between the rocks.",
+        "level": 2
+    },
+    {
+        "word_id": 66,
+        "word": "parachute",
+        "definition": "A device used to slow the descent of a person or object through the air.",
+        "sentence": "He deployed his parachute as he jumped.",
+        "level": 2
+    },
+    {
+        "word_id": 67,
+        "word": "quiet",
+        "definition": "Making little or no noise.",
+        "sentence": "The library was very quiet.",
+        "level": 2
+    },
+    {
+        "word_id": 68,
+        "word": "rescue",
+        "definition": "To save someone from a dangerous or distressing situation.",
+        "sentence": "The firefighters performed a daring rescue.",
+        "level": 2
+    },
+    {
+        "word_id": 69,
+        "word": "society",
+        "definition": "A group of individuals involved in persistent social interaction.",
+        "sentence": "We live in a complex society.",
+        "level": 2
+    },
+    {
+        "word_id": 70,
+        "word": "treasure",
+        "definition": "A quantity of valuable objects.",
+        "sentence": "The pirates buried their treasure on the island.",
+        "level": 2
+    },
+    {
+        "word_id": 71,
+        "word": "unique",
+        "definition": "Being the only one of its kind.",
+        "sentence": "Each snowflake is unique.",
+        "level": 2
+    },
+    {
+        "word_id": 72,
+        "word": "volcano",
+        "definition": "A mountain or hill having a crater through which lava erupts.",
+        "sentence": "The volcano erupted after centuries of dormancy.",
+        "level": 2
+    },
+    {
+        "word_id": 73,
+        "word": "weather",
+        "definition": "The state of the atmosphere at a place and time.",
+        "sentence": "The weather was rainy today.",
+        "level": 2
+    },
+    {
+        "word_id": 74,
+        "word": "xylophone",
+        "definition": "A musical instrument with wooden bars.",
+        "sentence": "The musician played a tune on the xylophone.",
+        "level": 2
+    },
+    {
+        "word_id": 75,
+        "word": "yacht",
+        "definition": "A medium-sized boat used for pleasure cruising or racing.",
+        "sentence": "They sailed the yacht across the bay.",
+        "level": 2
+    },
+    {
+        "word_id": 76,
+        "word": "zeal",
+        "definition": "Great energy or enthusiasm in pursuit of a cause.",
+        "sentence": "She approached the project with zeal.",
+        "level": 3
+    },
+    {
+        "word_id": 77,
+        "word": "abundant",
+        "definition": "Existing or available in large quantities.",
+        "sentence": "The forest was abundant with wildlife.",
+        "level": 3
+    },
+    {
+        "word_id": 78,
+        "word": "benevolent",
+        "definition": "Well-meaning and kindly.",
+        "sentence": "The organization was known for its benevolent acts.",
+        "level": 3
+    },
+    {
+        "word_id": 79,
+        "word": "courageous",
+        "definition": "Not deterred by danger or pain.",
+        "sentence": "The firefighter was courageous in the rescue.",
+        "level": 3
+    },
+    {
+        "word_id": 80,
+        "word": "dedicate",
+        "definition": "To devote time and effort to a particular task or purpose.",
+        "sentence": "She dedicated herself to her studies.",
+        "level": 3
+    },
+    {
+        "word_id": 81,
+        "word": "effortless",
+        "definition": "Requiring no physical or mental exertion.",
+        "sentence": "She made the task look effortless.",
+        "level": 3
+    },
+    {
+        "word_id": 82,
+        "word": "fortunate",
+        "definition": "Favored by or involving good luck.",
+        "sentence": "He was fortunate to avoid injury.",
+        "level": 3
+    },
+    {
+        "word_id": 83,
+        "word": "genuine",
+        "definition": "Truly what something is said to be.",
+        "sentence": "Her smile was genuine.",
+        "level": 3
+    },
+    {
+        "word_id": 84,
+        "word": "heroic",
+        "definition": "Having the characteristics of a hero or heroine.",
+        "sentence": "His actions were nothing short of heroic.",
+        "level": 3
+    },
+    {
+        "word_id": 85,
+        "word": "integrity",
+        "definition": "The quality of being honest and having strong moral principles.",
+        "sentence": "She acted with great integrity.",
+        "level": 3
+    },
+    {
+        "word_id": 86,
+        "word": "journey",
+        "definition": "An act of traveling from one place to another.",
+        "sentence": "They embarked on a long journey.",
+        "level": 3
+    },
+    {
+        "word_id": 87,
+        "word": "knowledgeable",
+        "definition": "Intelligent and well informed.",
+        "sentence": "He was very knowledgeable about history.",
+        "level": 3
+    },
+    {
+        "word_id": 88,
+        "word": "legend",
+        "definition": "A traditional story sometimes popularly regarded as historical.",
+        "sentence": "He told them the legend of the hidden treasure.",
+        "level": 3
+    },
+    {
+        "word_id": 89,
+        "word": "magnitude",
+        "definition": "The great size or extent of something.",
+        "sentence": "They did not realize the magnitude of the problem.",
+        "level": 3
+    },
+    {
+        "word_id": 90,
+        "word": "noble",
+        "definition": "Having or showing fine personal qualities or high moral principles.",
+        "sentence": "She made a noble gesture to help.",
+        "level": 3
+    },
+    {
+        "word_id": 91,
+        "word": "optimism",
+        "definition": "Hopefulness and confidence about the future.",
+        "sentence": "Her optimism inspired the whole team.",
+        "level": 3
+    },
+    {
+        "word_id": 92,
+        "word": "persistence",
+        "definition": "Firm continuance in a course of action in spite of difficulty.",
+        "sentence": "His persistence led to eventual success.",
+        "level": 3
+    },
+    {
+        "word_id": 93,
+        "word": "quaint",
+        "definition": "Attractively unusual or old-fashioned.",
+        "sentence": "The cottage had a quaint charm.",
+        "level": 3
+    },
+    {
+        "word_id": 94,
+        "word": "resilient",
+        "definition": "Able to withstand or recover quickly from difficult conditions.",
+        "sentence": "She was resilient in the face of adversity.",
+        "level": 3
+    },
+    {
+        "word_id": 95,
+        "word": "sophisticated",
+        "definition": "Having, revealing, or involving great knowledge or culture.",
+        "sentence": "The machine was a sophisticated piece of technology.",
+        "level": 3
+    },
+    {
+        "word_id": 96,
+        "word": "tenacious",
+        "definition": "Tending to keep a firm hold of something.",
+        "sentence": "She was tenacious in pursuing her dreams.",
+        "level": 3
+    },
+    {
+        "word_id": 97,
+        "word": "uplifting",
+        "definition": "Morally or spiritually elevating.",
+        "sentence": "The speech was uplifting and inspiring.",
+        "level": 3
+    },
+    {
+        "word_id": 98,
+        "word": "vivid",
+        "definition": "Producing powerful feelings or strong, clear images in the mind.",
+        "sentence": "Her description was vivid and detailed.",
+        "level": 3
+    },
+    {
+        "word_id": 99,
+        "word": "whimsical",
+        "definition": "Playfully quaint or fanciful.",
+        "sentence": "The illustrations in the book were whimsical.",
+        "level": 3
+    },
+    {
+        "word_id": 100,
+        "word": "xenial",
+        "definition": "Relating to hospitality between host and guest.",
+        "sentence": "The villagers were known for their xenial customs.",
+        "level": 3
+    },
+    {
+        "word_id": 101,
+        "word": "yonder",
+        "definition": "At some distance in the direction indicated.",
+        "sentence": "They looked yonder towards the hills.",
+        "level": 3
+    },
+    {
+        "word_id": 102,
+        "word": "zephyr",
+        "definition": "A gentle, mild breeze.",
+        "sentence": "The zephyr blew gently through the trees.",
+        "level": 3
+    }
+]
