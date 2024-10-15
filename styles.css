@@ -1,0 +1,88 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Honeycomb background */
+.honeycomb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(honeycomb.svg); /* Honeycomb pattern */
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 40vw;
+  width: 100%;
+  z-index: 1;
+}
+
+#nameForm h2 {
+  color: #f57f17;
+}
+
+
+/* Add this to your styles.css */
+
+/* Score panel styles */
+#scorePanel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f9a825;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  background-color: #f9a825;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f57f17;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: inline-flex;
+}
+
+p {
+  font-size: 1rem;
+  color: #333;
+}

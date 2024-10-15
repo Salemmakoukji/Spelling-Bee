@@ -1,0 +1,121 @@
+// app.js
+
+let words = []; // Will store words from the JSON
+let currentWord = {};
+let userName = "";
+let score = 0; // Initialize score
+
+// Fetch words from external JSON file
+fetch('WordsData.json')
+    .then(response => response.json())
+    .then(data => {
+        words = data;
+    })
+    .catch(error => console.error("Error loading words:", error));
+
+// DOM Elements
+const definition = document.getElementById('definition');
+const sentence = document.getElementById('sentence');
+const playWordBtn = document.getElementById('playWord');
+const replayWordBtn = document.getElementById('replayWord');
+const playDefinitionBtn = document.getElementById('playDefinition');
+const playSentenceBtn = document.getElementById('playSentence');
+const userInput = document.getElementById('userInput');
+const checkWordBtn = document.getElementById('checkWord');
+const feedback = document.getElementById('feedback');
+const nameForm = document.getElementById('nameForm');
+const gameArea = document.getElementById('gameArea');
+const welcomeMessage = document.getElementById('welcomeMessage');
+const startGameBtn = document.getElementById('startGame');
+const scoreElement = document.getElementById('score'); // Score DOM element
+
+// Start game after user enters their name
+startGameBtn.addEventListener('click', () => {
+    const nameInput = document.getElementById('userName').value.trim();
+    if (nameInput) {
+        userName = nameInput;
+        welcomeMessage.textContent = `Welcome, ${userName}! Let's start the Spelling Bee.`;
+        nameForm.style.display = 'none';
+        gameArea.style.display = 'block';
+        selectWord(1); // Start with level 1 word
+    }
+});
+
+// Function to select a word based on the level (random selection)
+function selectWord(level) {
+    const wordsAtLevel = words.filter(word => word.level === level);
+    const randomIndex = Math.floor(Math.random() * wordsAtLevel.length);
+    currentWord = wordsAtLevel[randomIndex];
+
+    // Display definition and sentence
+    definition.textContent = `Definition: ${currentWord.definition}`;
+    sentence.textContent = `Sentence: ${currentWord.sentence}`;
+
+    // Enable buttons for the next word, reset their state
+    playDefinitionBtn.disabled = false;
+    playSentenceBtn.disabled = false;
+
+    // Clear previous user input and feedback
+    userInput.value = "";
+    feedback.textContent = "";
+}
+
+// Play the word using Text-to-Speech API
+function playWord() {
+    const utterance = new SpeechSynthesisUtterance(currentWord.word);
+    speechSynthesis.speak(utterance);
+}
+
+// Replay the word using Text-to-Speech API
+function replayWord() {
+    playWord();
+}
+
+// Play the definition using Text-to-Speech API (and disable after playing)
+function playDefinition() {
+    const utterance = new SpeechSynthesisUtterance(currentWord.definition);
+    speechSynthesis.speak(utterance);
+
+    // Disable the button after playing once
+    playDefinitionBtn.disabled = true;
+}
+
+// Play the sentence using Text-to-Speech API (and disable after playing)
+function playSentence() {
+    const utterance = new SpeechSynthesisUtterance(currentWord.sentence);
+    speechSynthesis.speak(utterance);
+
+    // Disable the button after playing once
+    playSentenceBtn.disabled = true;
+}
+
+// Check if the user's input matches the word
+function checkWord() {
+    const userAnswer = userInput.value.trim().toLowerCase();
+    if (userAnswer === currentWord.word.toLowerCase()) {
+        feedback.textContent = "Correct!";
+        feedback.style.color = 'green';
+        updateScore(10); // Increase score by 10 for correct answer
+    } else {
+        feedback.textContent = `Incorrect. The correct word is: ${currentWord.word}`;
+        feedback.style.color = 'red';
+        updateScore(-5); // Decrease score by 5 for incorrect answer
+    }
+
+    // Disable buttons until next word
+    playDefinitionBtn.disabled = true;
+    playSentenceBtn.disabled = true;
+}
+
+// Update score and display it
+function updateScore(points) {
+    score += points;
+    scoreElement.textContent = score;
+}
+
+// Event listeners
+playWordBtn.addEventListener('click', playWord);
+replayWordBtn.addEventListener('click', replayWord);
+playDefinitionBtn.addEventListener('click', playDefinition);
+playSentenceBtn.addEventListener('click', playSentence);
+checkWordBtn.addEventListener('click', checkWord);
