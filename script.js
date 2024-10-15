@@ -44,7 +44,6 @@ document.getElementById('replayWord').addEventListener('click', replayWord);
 document.getElementById('playDefinition').addEventListener('click', playDefinition);
 document.getElementById('playSentence').addEventListener('click', playSentence);
 document.getElementById('submitAnswer').addEventListener('click', submitAnswer);
-document.getElementById('nextWord').addEventListener('click', loadNextWord);
 document.getElementById('downloadScore').addEventListener('click', downloadScore);
 
 function playWord() {
