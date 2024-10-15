@@ -4,36 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spelling Bee App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="honeycomb"></div>
     <div class="container">
-        <!-- Player Name Block -->
-        <div class="player-name-block">
-            <h2>Welcome to the Spelling Bee Game!</h2>
-            <input type="text" id="playerNameInput" placeholder="Enter your name" />
-            <button id="startGameBtn">Start Game</button>
+        <h1>Spelling Bee Game</h1>
+
+        <!-- Name input form -->
+        <div id="nameForm">
+            <h2>Enter Your Name to Play</h2>
+            <input type="text" id="userName" placeholder="Your name here" required />
+            <button id="startGame">Start Game</button>
         </div>
 
-        <!-- Game Box Block -->
-        <div class="game-box-block">
-            <div id="gameBox" class="game-box hidden">
-                <h3 id="wordDisplay">Word: </h3>
-                <input type="text" id="answerInput" placeholder="Type the word you hear" />
-                <button id="playWordBtn">Play Word</button>
-                <button id="replayWordBtn">Replay Word</button>
-                <button id="playDefinitionBtn" disabled>Play Definition</button>
-                <button id="playSentenceBtn" disabled>Play Sentence</button>
-                <button id="submitBtn">Submit</button>
-                <button id="nextWordBtn" class="hidden">Next Word</button>
-                <p id="resultMessage"></p>
-            </div>
-        </div>
+        <!-- Game area (hidden initially) -->
+        <div id="gameArea" style="display: none;">
+            <div id="scorePanel">Score: <span id="score">0</span>
+                <button id="exportData">Download Scores</button>
+            </div> <!-- Score panel -->
 
-        <!-- Download Score Button -->
-        <div class="download-score-block">
-            <button id="downloadScoreBtn" class="hidden">Download Score</button>
-            <p id="scorePanel">Score: 0</p>
+            <p id="welcomeMessage"></p>
+            <p id="definition"></p>
+            <p id="sentence"></p>
+            <!--<p id="definition"></p>
+            <p id="sentence"></p>-->
+
+            <!-- New buttons -->
+            <button id="playWord">Play Word</button>
+            <button id="replayWord">Replay Word</button>
+            <button id="playDefinition" disabled>Play Definition</button>
+            <button id="playSentence" disabled>Play Sentence</button>
+
+            <input type="text" id="userInput" placeholder="Type the word here" />
+            <button id="checkWord">Submit</button>
+            <button id="nextWord" style="display: none;">Next Word</button>
+            <p id="feedback"></p>
         </div>
     </div>
 
