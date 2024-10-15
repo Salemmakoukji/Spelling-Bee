@@ -1,4 +1,3 @@
-//script.js
 document.getElementById('startGame').addEventListener('click', startGame);
 
 let words = [];
@@ -50,6 +49,10 @@ document.getElementById('downloadScore').addEventListener('click', downloadScore
 function playWord() {
     speakText(currentWord.word);
     enableWordOptions();
+}
+
+function replayWord() {
+    speakText(currentWord.word);
 }
 
 function playDefinition() {
