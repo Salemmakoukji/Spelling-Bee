@@ -4,7 +4,7 @@ let words = [];
 let currentWord = {};
 let score = 0;
 
-fetch('Words.json')
+fetch('words.json')
     .then(response => response.json())
     .then(data => {
         words = data;
@@ -13,6 +13,9 @@ fetch('Words.json')
 function startGame() {
     const playerName = document.getElementById('playerName').value;
     if (playerName) {
+        document.getElementById('playerNameLabel').innerText = `Player: ${playerName}`;
+        document.getElementById('playerName').style.display = 'none';
+        document.getElementById('startGame').style.display = 'none';
         document.querySelector('.game-box').style.display = 'flex';
         loadNextWord();
     }
@@ -22,6 +25,7 @@ function loadNextWord() {
     if (words.length) {
         currentWord = words.pop();
         document.querySelector('.word-box').innerText = '';
+        document.getElementById('answer').value = '';
         enableButtons();
     }
 }
@@ -32,6 +36,7 @@ function enableButtons() {
     document.getElementById('playDefinition').disabled = true;
     document.getElementById('playSentence').disabled = true;
     document.getElementById('nextWord').disabled = true;
+    document.getElementById('result').innerText = '';
 }
 
 document.getElementById('playWord').addEventListener('click', playWord);
@@ -69,16 +74,17 @@ function submitAnswer() {
     const answer = document.getElementById('answer').value.trim();
     if (answer.toLowerCase() === currentWord.word.toLowerCase()) {
         score++;
-        alert('Correct!');
+        document.getElementById('result').innerText = 'Correct!';
     } else {
-        alert(`Incorrect! The correct spelling is ${currentWord.word}`);
+        document.getElementById('result').innerText = `Incorrect! The correct spelling is ${currentWord.word}`;
     }
     document.getElementById('score').innerText = score;
     document.getElementById('nextWord').disabled = false;
+    document.getElementById('answer').value = '';
 }
 
 function downloadScore() {
-    const playerName = document.getElementById('playerName').value;
+    const playerName = document.getElementById('playerNameLabel').innerText.split(': ')[1];
     const scoreData = { player: playerName, score: score };
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(scoreData));
     const downloadAnchorNode = document.createElement('a');
