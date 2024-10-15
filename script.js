@@ -40,7 +40,6 @@ function enableButtons() {
 }
 
 document.getElementById('playWord').addEventListener('click', playWord);
-document.getElementById('replayWord').addEventListener('click', replayWord);
 document.getElementById('playDefinition').addEventListener('click', playDefinition);
 document.getElementById('playSentence').addEventListener('click', playSentence);
 document.getElementById('submitAnswer').addEventListener('click', submitAnswer);
@@ -49,10 +48,6 @@ document.getElementById('downloadScore').addEventListener('click', downloadScore
 function playWord() {
     speakText(currentWord.word);
     enableWordOptions();
-}
-
-function replayWord() {
-    speakText(currentWord.word);
 }
 
 function playDefinition() {
