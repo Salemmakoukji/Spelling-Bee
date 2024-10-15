@@ -80,7 +80,7 @@ input[type="text"] {
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
-  width: 100%;
+  width: -webkit-fill-available;
 }
 
 .word-box {

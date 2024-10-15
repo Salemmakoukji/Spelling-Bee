@@ -33,15 +33,12 @@ function loadNextWord() {
 }
 
 function enableButtons() {
-    document.getElementById('playWord').disabled = false;
-    document.getElementById('replayWord').disabled = true;
     document.getElementById('playDefinition').disabled = true;
     document.getElementById('playSentence').disabled = true;
     document.getElementById('result').innerText = '';
 }
 
 document.getElementById('playWord').addEventListener('click', playWord);
-document.getElementById('replayWord').addEventListener('click', replayWord);
 document.getElementById('playDefinition').addEventListener('click', playDefinition);
 document.getElementById('playSentence').addEventListener('click', playSentence);
 document.getElementById('submitAnswer').addEventListener('click', submitAnswer);
@@ -61,7 +58,6 @@ function playSentence() {
 }
 
 function enableWordOptions() {
-    document.getElementById('replayWord').disabled = false;
     document.getElementById('playDefinition').disabled = false;
     document.getElementById('playSentence').disabled = false;
 }
