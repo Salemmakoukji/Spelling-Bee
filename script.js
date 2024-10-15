@@ -1,3 +1,4 @@
+//script.js
 document.getElementById('startGame').addEventListener('click', startGame);
 
 let words = [];
