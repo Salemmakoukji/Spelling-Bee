@@ -39,7 +39,9 @@ startGameBtn.addEventListener('click', () => {
         welcomeMessage.textContent = `Welcome, ${userName}! Let's start the Spelling Bee.`;
         nameForm.style.display = 'none';
         gameArea.style.display = 'block';
+
         selectWord(1); // Start with level 1 word
+
     }
 });
 
@@ -151,7 +153,7 @@ checkWordBtn.addEventListener('click', checkWord);
 
 // Load userScores from localStorage when the page loads
 window.onload = function() {
-    const savedScores = localStorage.getItem('userScores');
+    const savedScores = localStorage.getItem('userScores.json');
     if (savedScores) {
         userScores = JSON.parse(savedScores);
     }
