@@ -13,7 +13,7 @@ fetch('words.json')
 function startGame() {
     const playerName = document.getElementById('playerName').value;
     if (playerName) {
-        document.getElementById('playerNameLabel').innerText = `Player: ${playerName}`;
+        document.getElementById('playerNameLabel').innerText = `Hello ${playerName}!`;
         document.getElementById('playerName').style.display = 'none';
         document.getElementById('startGame').style.display = 'none';
         document.querySelector('.game-box').style.display = 'flex';
