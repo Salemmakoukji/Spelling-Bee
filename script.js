@@ -32,7 +32,6 @@ function loadNextWord() {
 }
 
 function enableButtons() {
-    document.getElementById('playWord').disabled = false;
     document.getElementById('playDefinition').disabled = true;
     document.getElementById('playSentence').disabled = true;
     document.getElementById('result').innerText = '';
@@ -62,7 +61,6 @@ function playSentence() {
 }
 
 function enableWordOptions() {
-    document.getElementById('replayWord').disabled = false;
     document.getElementById('playDefinition').disabled = false;
     document.getElementById('playSentence').disabled = false;
 }
