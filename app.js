@@ -148,3 +148,45 @@ replayWordBtn.addEventListener('click', replayWord);
 playDefinitionBtn.addEventListener('click', playDefinition);
 playSentenceBtn.addEventListener('click', playSentence);
 checkWordBtn.addEventListener('click', checkWord);
+
+// Load userScores from localStorage when the page loads
+window.onload = function() {
+    const savedScores = localStorage.getItem('userScores');
+    if (savedScores) {
+        userScores = JSON.parse(savedScores);
+    }
+}
+
+// Store user data in localStorage after updating the userScores array
+function saveUserData() {
+    const userData = {
+        username: userName,
+        points: score
+    };
+
+    userScores.push(userData); // Add the new user data to the array
+    localStorage.setItem('userScores', JSON.stringify(userScores)); // Save to localStorage
+
+    console.log("User data saved:", userScores);
+}
+
+// Function to download the userScores array as a JSON file
+function exportUserScores() {
+    const dataStr = JSON.stringify(userScores, null, 2); // Convert to JSON string
+    const blob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    // Create a temporary download link
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'userScores.json'; // The name of the exported file
+    document.body.appendChild(a);
+    a.click();
+
+    // Clean up
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+// Add event listener to the export button
+document.getElementById('exportData').addEventListener('click', exportUserScores);
