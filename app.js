@@ -102,10 +102,12 @@ function checkWord() {
         feedback.textContent = "Correct!";
         feedback.style.color = 'green';
         updateScore(10); // Increase score by 10 for correct answer
+        saveUserData()
     } else {
         feedback.textContent = `Wrong! The correct word is: ${currentWord.word}`;
         feedback.style.color = 'red';
         updateScore(-5); // Decrease score by 5 for incorrect answer
+        saveUserData()
     }
 
     // Hide "Submit" button and show "Next Word" button
