@@ -30,3 +30,4 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = `${gameId}/index.html`;
     }
 });
+//tbc
