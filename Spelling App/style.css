@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #e2a704;
 }
 
 .menubar {
@@ -85,4 +85,29 @@ body {
 
 .square-button:hover {
   background-color: #45a049;
+}
+
+.menubar {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.logo-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.site-title {
+  color: white;
+  font-size: 1.5em;
 }
