@@ -2,30 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Spelling Bee Game</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="Spelling Bee Logo tranparent.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="Homestyle.css">
 </head>
 <body>
-    <div class="container">
-        <img src="Spelling Bee Logo Small.jpg" alt="Logo" class="logo">
-        <h1>Spelling Bee Game</h1>
-        <input type="text" id="playerName" placeholder="Enter your name">
-        <button id="startGame">Start Game</button>
-        
-        <div class="game-box">
-            <div class="score-panel">Score: <span id="score">0</span></div>
-            <div id="playerNameLabel"></div>
-            <div class="word-box"></div>
-            <button id="playWord">Play Word</button>
-            <button id="playDefinition" disabled>Play Definition</button>
-            <button id="playSentence" disabled>Play Sentence</button>
-            <input type="text" id="answer" placeholder="Type the word">
-            <button id="submitAnswer">Submit</button>
-            <div id="result"></div>
+    <nav class="menubar">
+        <div class="logo-title-container">
+            <img src="/Spelling Bee Logo Small.jpg" alt="Logo" class="logo">
+            <div class="site-title">My Website</div>
         </div>
-        <button id="downloadScore">Download Score</button>
+        <ul class="menu-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sign in</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="button-grid">
+            <button class="square-button">Button 1</button>
+            <button class="square-button">Button 2</button>
+            <button class="square-button">Button 3</button>
+            <button class="square-button">Button 4</button>
+            <button class="square-button">Button 5</button>
+            <button class="square-button">Button 6</button>
+        </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
