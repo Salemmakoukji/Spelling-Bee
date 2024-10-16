@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-image: url(Spelling\ Bee\ Pattern\ Transparent.png);
   background-size: cover;
   background-position: center;
@@ -46,9 +46,10 @@ h1 {
 .score-panel {
   font-size: 1em;
   margin-bottom: 10px;
-  position: absolute;
+  position: fixed;
+  width: 400px;
   top: 10px;
-  right: 10px;
+  /* right: 10px; */
   background-color: #ffcb18;
   padding: 10px;
   border-radius: 5px;
