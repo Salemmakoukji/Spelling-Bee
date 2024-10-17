@@ -1,5 +1,5 @@
-/*Words*/
-[
+{
+"words": [
     {"word_id": 1, "word": "banana", "definition": "A long curved fruit that grows in clusters.", "sentence": "She ate a ripe banana for breakfast.", "level": 1},
     {"word_id": 2, "word": "elephant", "definition": "A large mammal with a trunk.", "sentence": "The elephant sprayed water with its trunk.", "level": 2},
     {"word_id": 3, "word": "umbrella", "definition": "A device for protection against rain.", "sentence": "He opened his umbrella when it started raining.", "level": 1},
@@ -51,3 +51,4 @@
     {"word_id": 49, "word": "microscope", "definition": "An instrument used for viewing very small objects.", "sentence": "The scientist used a microscope to examine the cells.", "level": 3},
     {"word_id": 50, "word": "photography", "definition": "The art of taking and processing photographs.", "sentence": "She loved photography and took pictures everywhere.", "level": 3}
 ]
+}
