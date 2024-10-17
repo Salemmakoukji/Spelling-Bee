@@ -1,54 +1,354 @@
 {
-"words": [
-    {"word_id": 1, "word": "banana", "definition": "A long curved fruit that grows in clusters.", "sentence": "She ate a ripe banana for breakfast.", "level": 1},
-    {"word_id": 2, "word": "elephant", "definition": "A large mammal with a trunk.", "sentence": "The elephant sprayed water with its trunk.", "level": 2},
-    {"word_id": 3, "word": "umbrella", "definition": "A device for protection against rain.", "sentence": "He opened his umbrella when it started raining.", "level": 1},
-    {"word_id": 4, "word": "giraffe", "definition": "A tall mammal with a very long neck.", "sentence": "The giraffe ate leaves from the highest branches.", "level": 2},
-    {"word_id": 5, "word": "xylophone", "definition": "A musical instrument played by striking wooden bars.", "sentence": "He played a beautiful melody on the xylophone.", "level": 3},
-    {"word_id": 6, "word": "sapphire", "definition": "A precious blue gemstone.", "sentence": "She wore a sapphire necklace to the party.", "level": 3},
-    {"word_id": 7, "word": "kangaroo", "definition": "A marsupial from Australia that moves by hopping.", "sentence": "The kangaroo carried its baby in its pouch.", "level": 2},
-    {"word_id": 8, "word": "chocolate", "definition": "A sweet brown food made from cocoa beans.", "sentence": "He ate a piece of dark chocolate.", "level": 1},
-    {"word_id": 9, "word": "penguin", "definition": "A flightless bird that lives in cold regions.", "sentence": "The penguin slid on the ice.", "level": 1},
-    {"word_id": 10, "word": "avocado", "definition": "A green fruit with a large seed, used in guacamole.", "sentence": "She sliced the avocado for her salad.", "level": 1},
-    {"word_id": 11, "word": "anxious", "definition": "Experiencing worry or nervousness.", "sentence": "She felt anxious before her exam.", "level": 2},
-    {"word_id": 12, "word": "persuade", "definition": "To convince someone to do something.", "sentence": "He persuaded her to join the club.", "level": 2},
-    {"word_id": 13, "word": "architecture", "definition": "The art or practice of designing buildings.", "sentence": "The architecture of the museum was impressive.", "level": 3},
-    {"word_id": 14, "word": "magnificent", "definition": "Extremely beautiful or impressive.", "sentence": "The sunset over the ocean was magnificent.", "level": 3},
-    {"word_id": 15, "word": "quarantine", "definition": "A period of isolation to prevent disease spread.", "sentence": "The animals were kept in quarantine before entering the country.", "level": 3},
-    {"word_id": 16, "word": "dolphin", "definition": "A highly intelligent aquatic mammal.", "sentence": "The dolphin jumped out of the water.", "level": 1},
-    {"word_id": 17, "word": "pyramid", "definition": "A monumental structure with a square or triangular base.", "sentence": "They visited the pyramids in Egypt.", "level": 2},
-    {"word_id": 18, "word": "alligator", "definition": "A large reptile with a long snout.", "sentence": "The alligator basked in the sun by the river.", "level": 2},
-    {"word_id": 19, "word": "bicycle", "definition": "A vehicle with two wheels powered by pedaling.", "sentence": "She rode her bicycle to the park.", "level": 1},
-    {"word_id": 20, "word": "horizon", "definition": "The line where the earth's surface and the sky appear to meet.", "sentence": "They watched the sun set over the horizon.", "level": 2},
-    {"word_id": 21, "word": "rendezvous", "definition": "A meeting at an agreed time and place.", "sentence": "They had a secret rendezvous at the café.", "level": 3},
-    {"word_id": 22, "word": "curiosity", "definition": "A strong desire to know or learn something.", "sentence": "His curiosity led him to explore the cave.", "level": 2},
-    {"word_id": 23, "word": "balloon", "definition": "A flexible bag filled with air or gas.", "sentence": "The child released the balloon into the sky.", "level": 1},
-    {"word_id": 24, "word": "adventure", "definition": "An exciting or unusual experience.", "sentence": "They went on an adventure in the jungle.", "level": 2},
-    {"word_id": 25, "word": "hypothesis", "definition": "An idea or explanation based on limited evidence.", "sentence": "The scientist tested her hypothesis.", "level": 3},
-    {"word_id": 26, "word": "astronomy", "definition": "The scientific study of celestial bodies.", "sentence": "He was fascinated by astronomy and the stars.", "level": 2},
-    {"word_id": 27, "word": "envelope", "definition": "A flat paper container for a letter.", "sentence": "She sealed the envelope before mailing it.", "level": 1},
-    {"word_id": 28, "word": "diamond", "definition": "A precious gemstone known for its brilliance.", "sentence": "The ring had a large diamond in the center.", "level": 2},
-    {"word_id": 29, "word": "mysterious", "definition": "Difficult or impossible to understand.", "sentence": "The mansion had a mysterious aura about it.", "level": 3},
-    {"word_id": 30, "word": "accordion", "definition": "A musical instrument played by squeezing air.", "sentence": "He played folk songs on his accordion.", "level": 3},
-    {"word_id": 31, "word": "vulture", "definition": "A large bird that feeds on dead animals.", "sentence": "The vulture circled above the desert.", "level": 2},
-    {"word_id": 32, "word": "honeycomb", "definition": "A structure of hexagonal cells made by bees.", "sentence": "The bees filled the honeycomb with honey.", "level": 1},
-    {"word_id": 33, "word": "zebra", "definition": "An African wild horse with black-and-white stripes.", "sentence": "The zebra grazed peacefully in the savanna.", "level": 1},
-    {"word_id": 34, "word": "volcano", "definition": "A mountain that can erupt with lava.", "sentence": "The volcano erupted with fiery lava.", "level": 2},
-    {"word_id": 35, "word": "trampoline", "definition": "A strong fabric attached to a frame used for jumping.", "sentence": "The kids had fun bouncing on the trampoline.", "level": 1},
-    {"word_id": 36, "word": "octopus", "definition": "A sea creature with eight arms.", "sentence": "The octopus hid in the coral reef.", "level": 1},
-    {"word_id": 37, "word": "whistle", "definition": "A high-pitched sound made by blowing through lips.", "sentence": "He gave a loud whistle to call his dog.", "level": 1},
-    {"word_id": 38, "word": "thunderstorm", "definition": "A storm with thunder and lightning.", "sentence": "The thunderstorm shook the house.", "level": 2},
-    {"word_id": 39, "word": "carousel", "definition": "A rotating amusement ride with horses.", "sentence": "They rode the carousel at the fair.", "level": 1},
-    {"word_id": 40, "word": "oxygen", "definition": "A gas that is essential for breathing.", "sentence": "We need oxygen to survive.", "level": 2},
-    {"word_id": 41, "word": "crocodile", "definition": "A large aquatic reptile with sharp teeth.", "sentence": "The crocodile waited in the water.", "level": 2},
-    {"word_id": 42, "word": "television", "definition": "A device for receiving visual broadcasts.", "sentence": "They watched the news on television.", "level": 1},
-    {"word_id": 43, "word": "whiskers", "definition": "Long stiff hairs growing near the mouth of an animal.", "sentence": "The cat's whiskers twitched.", "level": 1},
-    {"word_id": 44, "word": "guitar", "definition": "A musical instrument with strings.", "sentence": "He played a song on his guitar.", "level": 1},
-    {"word_id": 45, "word": "kangaroo", "definition": "A marsupial from Australia.", "sentence": "The kangaroo hopped across the field.", "level": 2},
-    {"word_id": 46, "word": "ambulance", "definition": "A vehicle for transporting sick or injured people.", "sentence": "The ambulance arrived at the accident scene.", "level": 2},
-    {"word_id": 47, "word": "parrot", "definition": "A colorful bird known for imitating sounds.", "sentence": "The parrot repeated what it heard.", "level": 1},
-    {"word_id": 48, "word": "helicopter", "definition": "A type of aircraft that can hover and fly.", "sentence": "The helicopter landed on the roof.", "level": 2},
-    {"word_id": 49, "word": "microscope", "definition": "An instrument used for viewing very small objects.", "sentence": "The scientist used a microscope to examine the cells.", "level": 3},
-    {"word_id": 50, "word": "photography", "definition": "The art of taking and processing photographs.", "sentence": "She loved photography and took pictures everywhere.", "level": 3}
-]
+    "words": [
+        {
+            "word_id": 1,
+            "word": "banana",
+            "definition": "A long curved fruit that grows in clusters.",
+            "sentence": "She ate a ripe banana for breakfast.",
+            "level": 1
+        },
+        {
+            "word_id": 2,
+            "word": "elephant",
+            "definition": "A large mammal with a trunk.",
+            "sentence": "The elephant sprayed water with its trunk.",
+            "level": 2
+        },
+        {
+            "word_id": 3,
+            "word": "umbrella",
+            "definition": "A device for protection against rain.",
+            "sentence": "He opened his umbrella when it started raining.",
+            "level": 1
+        },
+        {
+            "word_id": 4,
+            "word": "giraffe",
+            "definition": "A tall mammal with a very long neck.",
+            "sentence": "The giraffe ate leaves from the highest branches.",
+            "level": 2
+        },
+        {
+            "word_id": 5,
+            "word": "xylophone",
+            "definition": "A musical instrument played by striking wooden bars.",
+            "sentence": "He played a beautiful melody on the xylophone.",
+            "level": 3
+        },
+        {
+            "word_id": 6,
+            "word": "sapphire",
+            "definition": "A precious blue gemstone.",
+            "sentence": "She wore a sapphire necklace to the party.",
+            "level": 3
+        },
+        {
+            "word_id": 7,
+            "word": "kangaroo",
+            "definition": "A marsupial from Australia that moves by hopping.",
+            "sentence": "The kangaroo carried its baby in its pouch.",
+            "level": 2
+        },
+        {
+            "word_id": 8,
+            "word": "chocolate",
+            "definition": "A sweet brown food made from cocoa beans.",
+            "sentence": "He ate a piece of dark chocolate.",
+            "level": 1
+        },
+        {
+            "word_id": 9,
+            "word": "penguin",
+            "definition": "A flightless bird that lives in cold regions.",
+            "sentence": "The penguin slid on the ice.",
+            "level": 1
+        },
+        {
+            "word_id": 10,
+            "word": "avocado",
+            "definition": "A green fruit with a large seed, used in guacamole.",
+            "sentence": "She sliced the avocado for her salad.",
+            "level": 1
+        },
+        {
+            "word_id": 11,
+            "word": "anxious",
+            "definition": "Experiencing worry or nervousness.",
+            "sentence": "She felt anxious before her exam.",
+            "level": 2
+        },
+        {
+            "word_id": 12,
+            "word": "persuade",
+            "definition": "To convince someone to do something.",
+            "sentence": "He persuaded her to join the club.",
+            "level": 2
+        },
+        {
+            "word_id": 13,
+            "word": "architecture",
+            "definition": "The art or practice of designing buildings.",
+            "sentence": "The architecture of the museum was impressive.",
+            "level": 3
+        },
+        {
+            "word_id": 14,
+            "word": "magnificent",
+            "definition": "Extremely beautiful or impressive.",
+            "sentence": "The sunset over the ocean was magnificent.",
+            "level": 3
+        },
+        {
+            "word_id": 15,
+            "word": "quarantine",
+            "definition": "A period of isolation to prevent disease spread.",
+            "sentence": "The animals were kept in quarantine before entering the country.",
+            "level": 3
+        },
+        {
+            "word_id": 16,
+            "word": "dolphin",
+            "definition": "A highly intelligent aquatic mammal.",
+            "sentence": "The dolphin jumped out of the water.",
+            "level": 1
+        },
+        {
+            "word_id": 17,
+            "word": "pyramid",
+            "definition": "A monumental structure with a square or triangular base.",
+            "sentence": "They visited the pyramids in Egypt.",
+            "level": 2
+        },
+        {
+            "word_id": 18,
+            "word": "alligator",
+            "definition": "A large reptile with a long snout.",
+            "sentence": "The alligator basked in the sun by the river.",
+            "level": 2
+        },
+        {
+            "word_id": 19,
+            "word": "bicycle",
+            "definition": "A vehicle with two wheels powered by pedaling.",
+            "sentence": "She rode her bicycle to the park.",
+            "level": 1
+        },
+        {
+            "word_id": 20,
+            "word": "horizon",
+            "definition": "The line where the earth's surface and the sky appear to meet.",
+            "sentence": "They watched the sun set over the horizon.",
+            "level": 2
+        },
+        {
+            "word_id": 21,
+            "word": "rendezvous",
+            "definition": "A meeting at an agreed time and place.",
+            "sentence": "They had a secret rendezvous at the café.",
+            "level": 3
+        },
+        {
+            "word_id": 22,
+            "word": "curiosity",
+            "definition": "A strong desire to know or learn something.",
+            "sentence": "His curiosity led him to explore the cave.",
+            "level": 2
+        },
+        {
+            "word_id": 23,
+            "word": "balloon",
+            "definition": "A flexible bag filled with air or gas.",
+            "sentence": "The child released the balloon into the sky.",
+            "level": 1
+        },
+        {
+            "word_id": 24,
+            "word": "adventure",
+            "definition": "An exciting or unusual experience.",
+            "sentence": "They went on an adventure in the jungle.",
+            "level": 2
+        },
+        {
+            "word_id": 25,
+            "word": "hypothesis",
+            "definition": "An idea or explanation based on limited evidence.",
+            "sentence": "The scientist tested her hypothesis.",
+            "level": 3
+        },
+        {
+            "word_id": 26,
+            "word": "astronomy",
+            "definition": "The scientific study of celestial bodies.",
+            "sentence": "He was fascinated by astronomy and the stars.",
+            "level": 2
+        },
+        {
+            "word_id": 27,
+            "word": "envelope",
+            "definition": "A flat paper container for a letter.",
+            "sentence": "She sealed the envelope before mailing it.",
+            "level": 1
+        },
+        {
+            "word_id": 28,
+            "word": "diamond",
+            "definition": "A precious gemstone known for its brilliance.",
+            "sentence": "The ring had a large diamond in the center.",
+            "level": 2
+        },
+        {
+            "word_id": 29,
+            "word": "mysterious",
+            "definition": "Difficult or impossible to understand.",
+            "sentence": "The mansion had a mysterious aura about it.",
+            "level": 3
+        },
+        {
+            "word_id": 30,
+            "word": "accordion",
+            "definition": "A musical instrument played by squeezing air.",
+            "sentence": "He played folk songs on his accordion.",
+            "level": 3
+        },
+        {
+            "word_id": 31,
+            "word": "vulture",
+            "definition": "A large bird that feeds on dead animals.",
+            "sentence": "The vulture circled above the desert.",
+            "level": 2
+        },
+        {
+            "word_id": 32,
+            "word": "honeycomb",
+            "definition": "A structure of hexagonal cells made by bees.",
+            "sentence": "The bees filled the honeycomb with honey.",
+            "level": 1
+        },
+        {
+            "word_id": 33,
+            "word": "zebra",
+            "definition": "An African wild horse with black-and-white stripes.",
+            "sentence": "The zebra grazed peacefully in the savanna.",
+            "level": 1
+        },
+        {
+            "word_id": 34,
+            "word": "volcano",
+            "definition": "A mountain that can erupt with lava.",
+            "sentence": "The volcano erupted with fiery lava.",
+            "level": 2
+        },
+        {
+            "word_id": 35,
+            "word": "trampoline",
+            "definition": "A strong fabric attached to a frame used for jumping.",
+            "sentence": "The kids had fun bouncing on the trampoline.",
+            "level": 1
+        },
+        {
+            "word_id": 36,
+            "word": "octopus",
+            "definition": "A sea creature with eight arms.",
+            "sentence": "The octopus hid in the coral reef.",
+            "level": 1
+        },
+        {
+            "word_id": 37,
+            "word": "whistle",
+            "definition": "A high-pitched sound made by blowing through lips.",
+            "sentence": "He gave a loud whistle to call his dog.",
+            "level": 1
+        },
+        {
+            "word_id": 38,
+            "word": "thunderstorm",
+            "definition": "A storm with thunder and lightning.",
+            "sentence": "The thunderstorm shook the house.",
+            "level": 2
+        },
+        {
+            "word_id": 39,
+            "word": "carousel",
+            "definition": "A rotating amusement ride with horses.",
+            "sentence": "They rode the carousel at the fair.",
+            "level": 1
+        },
+        {
+            "word_id": 40,
+            "word": "oxygen",
+            "definition": "A gas that is essential for breathing.",
+            "sentence": "We need oxygen to survive.",
+            "level": 2
+        },
+        {
+            "word_id": 41,
+            "word": "crocodile",
+            "definition": "A large aquatic reptile with sharp teeth.",
+            "sentence": "The crocodile waited in the water.",
+            "level": 2
+        },
+        {
+            "word_id": 42,
+            "word": "television",
+            "definition": "A device for receiving visual broadcasts.",
+            "sentence": "They watched the news on television.",
+            "level": 1
+        },
+        {
+            "word_id": 43,
+            "word": "whiskers",
+            "definition": "Long stiff hairs growing near the mouth of an animal.",
+            "sentence": "The cat's whiskers twitched.",
+            "level": 1
+        },
+        {
+            "word_id": 44,
+            "word": "guitar",
+            "definition": "A musical instrument with strings.",
+            "sentence": "He played a song on his guitar.",
+            "level": 1
+        },
+        {
+            "word_id": 45,
+            "word": "kangaroo",
+            "definition": "A marsupial from Australia.",
+            "sentence": "The kangaroo hopped across the field.",
+            "level": 2
+        },
+        {
+            "word_id": 46,
+            "word": "ambulance",
+            "definition": "A vehicle for transporting sick or injured people.",
+            "sentence": "The ambulance arrived at the accident scene.",
+            "level": 2
+        },
+        {
+            "word_id": 47,
+            "word": "parrot",
+            "definition": "A colorful bird known for imitating sounds.",
+            "sentence": "The parrot repeated what it heard.",
+            "level": 1
+        },
+        {
+            "word_id": 48,
+            "word": "helicopter",
+            "definition": "A type of aircraft that can hover and fly.",
+            "sentence": "The helicopter landed on the roof.",
+            "level": 2
+        },
+        {
+            "word_id": 49,
+            "word": "microscope",
+            "definition": "An instrument used for viewing very small objects.",
+            "sentence": "The scientist used a microscope to examine the cells.",
+            "level": 3
+        },
+        {
+            "word_id": 50,
+            "word": "photography",
+            "definition": "The art of taking and processing photographs.",
+            "sentence": "She loved photography and took pictures everywhere.",
+            "level": 3
+        }
+    ]
 }
