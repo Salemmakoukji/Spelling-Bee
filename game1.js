@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function playWord() {
   // Fetch a random word from the Words.json file
-  fetch('Words.json')
+  fetch('words.json')
     .then(response => response.json())
     .then(data => {
       const randomIndex = Math.floor(Math.random() * data.words.length);
