@@ -1,3 +1,4 @@
+/*Words*/
 [
     {"word_id": 1, "word": "banana", "definition": "A long curved fruit that grows in clusters.", "sentence": "She ate a ripe banana for breakfast.", "level": 1},
     {"word_id": 2, "word": "elephant", "definition": "A large mammal with a trunk.", "sentence": "The elephant sprayed water with its trunk.", "level": 2},
