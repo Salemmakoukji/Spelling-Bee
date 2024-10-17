@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Simulate fetching user data from a JSON file
 
 });
 
@@ -44,7 +43,7 @@ function signIn() {
       const user = data.user;
 
       // Validate the entered username and password
-      if (username === loggedInUser.name && password === loggedInUser.password) {
+      if (username === user.name && password === user.password) {
         message.style.color = 'green';
         message.textContent = 'Sign in successful!';
         closeModal();
@@ -59,6 +58,7 @@ function signIn() {
         playerDetails.style.display = 'flex';
         playerName.textContent = `Player: ${user.name}`;
         playerScore.textContent = `Score: ${user.score}`;
+        checkUserStatus(data);
 
       } else {
         message.style.color = 'red';
