@@ -1,48 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spelling Bee</title>
-    <link rel="stylesheet" href='style.css'>
-    <link rel="icon" href='/Assets/Spelling Bee Logo Small.jpg'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spelling Bee</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href='/Assets/Spelling Bee Logo tranparent.png'>
 </head>
-
 <body>
-    <div id="navbar"></div>
-    <div class="container">
-        <div class="card-grid">
-            <!-- Cards go here -->
-            <div class="card">
-                <img src="path/to/your/game1-logo.png" alt="Spelling Game" class="card-logo">
-                <p class="card-description">In the Spelling Game, players will hear a word and must type it correctly to progress. It’s an engaging way to enhance your spelling skills and auditory comprehension. Perfect for word enthusiasts and learners alike—are you ready to put your spelling abilities to the test? 🖋️🏆</p>
-                <button class="card-button" onclick="navigateToGame('SpellingApp')">Play Game 1</button>
-            </div>
-            <div class="card">
-                <img src="path/to/your/game2-logo.png" alt="Game 2 Logo" class="card-logo">
-                <p class="card-description">Game 2 Description</p>
-                <button class="card-button" onclick="navigateToGame('game2')">Play Game 2</button>
-            </div>
-            <div class="card">
-                <img src="path/to/your/game2-logo.png" alt="Game 2 Logo" class="card-logo">
-                <p class="card-description">Game 2 Description</p>
-                <button class="card-button" onclick="navigateToGame('game2')">Play Game 2</button>
-            </div>
-            <div class="card">
-                <img src="path/to/your/game2-logo.png" alt="Game 2 Logo" class="card-logo">
-                <p class="card-description">Game 2 Description</p>
-                <button class="card-button" onclick="navigateToGame('game2')">Play Game 2</button>
-            </div>
-            <div class="card">
-                <img src="path/to/your/game2-logo.png" alt="Game 2 Logo" class="card-logo">
-                <p class="card-description">Game 2 Description</p>
-                <button class="card-button" onclick="navigateToGame('game2')">Play Game 2</button>
-            </div>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="Assets/Spelling Bee Logo tranparent.png" alt="Logo">
+        <h1>Spelling Bee</h1>
+      </div>
+      <div id="userInfo" class="user-info">
+        <!-- This will display either the Sign In button or the user info -->
+        <button class="sign-in-btn" id="signInBtn" onclick="openModal()">Sign In</button>
+        <div id="playerDetails" class="player-details" style="display: none;">
+          <span id="playerName"></span>
+          <span id="playerScore"></span>
         </div>
-    </div>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Sign In/Sign Up Popup -->
+  <main>
+    <section class="games">
+      <!-- Game 1: Spelling -->
+      <div class="game-card">
+        <img src="spelling.jpg" alt="Spelling Game">
+        <h2>Spelling</h2>
+        <p>Listen to the word and write it correctly.</p>
+        <button>Play</button>
+      </div>
+
+      <!-- Game 2: Who am I? -->
+      <div class="game-card">
+        <img src="whoami.jpg" alt="Who am I Game">
+        <h2>Who am I?</h2>
+        <p>Guess the object based on a description.</p>
+        <button>Play</button>
+      </div>
+
+      <!-- Game 3: Hangman -->
+      <div class="game-card">
+        <img src="hangman.jpg" alt="Hangman Game">
+        <h2>Hangman</h2>
+        <p>Guess the word, letter by letter.</p>
+        <button>Play</button>
+      </div>
+
+      <!-- Game 4: What is it? -->
+      <div class="game-card">
+        <img src="whatisit.jpg" alt="What is it Game">
+        <h2>What is it?</h2>
+        <p>Guess the object from the picture.</p>
+        <button>Play</button>
+      </div>
+
+      <!-- Game 5: Missing Letters -->
+      <div class="game-card">
+        <img src="missingletters.jpg" alt="Missing Letters Game">
+        <h2>Missing Letters</h2>
+        <p>Fill in the missing letters to complete the word.</p>
+        <button>Play</button>
+      </div>
+
+      <!-- Game 6: 10 Words -->
+      <div class="game-card">
+        <img src="10words.jpg" alt="10 Words Game">
+        <h2>10 Words</h2>
+        <p>Write 10 words starting with a random letter.</p>
+        <button>Play</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sign In Modal -->
+  <div id="signInModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>Sign In</h2>
+      <form id="signInForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="button" onclick="signIn()">Sign In</button>
+      </form>
+      <p id="signInMessage"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-<script defer src="script.js"></script>
 </html>

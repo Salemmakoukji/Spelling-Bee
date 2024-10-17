@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spelling Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <h1>Spelling Bee</h1>
+      </div>
+      <button class="sign-in-btn">Sign In</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Spelling Game</h2>
+    <p>Listen to the word and spell it correctly.</p>
+    <button onclick="playWord()">Play Word</button>
+    <input type="text" id="word-input" placeholder="Type the word">
+    <button onclick="checkSpelling()">Submit</button>
+    <p id="result"></p>
+  </main>
+
+  <script>
+    const wordToSpell = "example"; // The word to be spelled (you can dynamically load words)
+
+    function playWord() {
+      // Simulate word playing (replace with real audio for better experience)
+      alert("Playing word: " + wordToSpell);
+    }
+
+    function checkSpelling() {
+      const userInput = document.getElementById('word-input').value;
+      const result = document.getElementById('result');
+      if (userInput.toLowerCase() === wordToSpell.toLowerCase()) {
+        result.textContent = "Correct!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Try Again!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

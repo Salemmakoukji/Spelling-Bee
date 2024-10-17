@@ -1,107 +1,64 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const playerNameElement = document.getElementById('player-name');
-    const playerScoreElement = document.getElementById('player-score');
-    const signinBtn = document.getElementById('signin-btn');
-    const popup = document.getElementById('popup');
-    const closeBtn = document.querySelector('.close-btn');
-    const popupSubmitBtn = document.getElementById('popup-submit-btn');
-    const playerNameInput = document.getElementById('player-name-input');
-    const apiKey = 'BAZdSkMJLz3WU5fIhrrOtGExA1q8CgzU'; // Replace with your actual API key
-    const apiUrl = 'https://api.baserow.io/api/database/'; // Adjust URL to your Baserow instance
-    const tableId = '373691'; // Replace with your actual table ID
-
-    fetch('Menu.html')
-        .then(response => response.text())
-        .then(data => {document.getElementById('navbar').innerHTML = data;})
-
-    // Function to get a cookie value by name
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-    }
-
-    // Function to set a cookie
-    function setCookie(name, value, days) {
-        const d = new Date();
-        d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + d.toUTCString();
-        document.cookie = name + "=" + value + ";" + expires + ";path=/";
-    }
-
-    // Initialize player name and score from cookies
-    let playerName = getCookie('playerName') || "Guest";
-    let playerScore = getCookie('playerScore') || 0;
-
-    // Function to update player info
-    function updatePlayerInfo(name, score) {
-        playerName = name;
-        playerScore = score;
-        playerNameElement.textContent = `Player: ${playerName}`;
-        playerScoreElement.textContent = `Score: ${playerScore}`;
-        setCookie('playerName', name, 7);
-        setCookie('playerScore', score, 7);
-        playerNameElement.style.display = 'inline';
-        playerScoreElement.style.display = 'inline';
-        signinBtn.style.display = 'none';
-    }
-
-    // Fetch player info from Baserow
-    async function fetchPlayerInfo(playerName) {
-        try {
-            const response = await fetch(`${apiUrl}tables/${tableId}/rows/`, {
-                headers: {
-                    'Authorization': `Token ${apiKey}`,
-                    'Content-Type': 'application/json'
-                }
-            });
-            if (response.ok) {
-                const data = await response.json();
-                // Find the player data by name
-                const playerData = data.results.find(row => row.name === playerName);
-                if (playerData) {
-                    updatePlayerInfo(playerData.name, playerData.score);
-                } else {
-                    console.error('Player not found in database');
-                }
-            } else {
-                console.error('Error fetching player info:', response.status);
-            }
-        } catch (error) {
-            console.error('Error fetching player info:', error);
-        }
-    }
-
-    // Show popup for sign-in
-    signinBtn.addEventListener('click', () => {
-        popup.style.display = 'block';
+document.addEventListener('DOMContentLoaded', function() {
+  // Simulate fetching user data from a JSON file
+  fetch('userScores.json')
+    .then(response => response.json())
+    .then(data => {
+      checkUserStatus(data);
+    })
+    .catch(error => {
+      console.error('Error loading user data:', error);
     });
-
-    closeBtn.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target == popup) {
-            popup.style.display = 'none';
-        }
-    });
-
-    // Handle sign-in
-    popupSubmitBtn.addEventListener('click', () => {
-        const playerNameInputValue = playerNameInput.value.trim();
-        if (playerNameInputValue) {
-            fetchPlayerInfo(playerNameInputValue);
-            popup.style.display = 'none';
-        } else {
-            alert('Please enter your player name');
-        }
-    });
-
-    // Initialize player info on page load
-    updatePlayerInfo(playerName, playerScore);
-
-    function navigateToGame(gameId) {
-        window.location.href = `/${gameId}/SpellingApp/index.html`;
-    }
 });
+
+function checkUserStatus(data) {
+  const signInBtn = document.getElementById('signInBtn');
+  const playerDetails = document.getElementById('playerDetails');
+  const playerName = document.getElementById('playerName');
+  const playerScore = document.getElementById('playerScore');
+
+  const loggedInUser = data.user;  // Assuming 'user' contains the logged-in user's info
+
+  if (loggedInUser && loggedInUser.name && loggedInUser.score && loggedInUser.password) {
+    // If user is found in the data, hide sign-in button and display player info
+    signInBtn.style.display = 'none';
+    playerDetails.style.display = 'flex';
+    playerName.textContent = `Player: ${loggedInUser.name}`;
+    playerScore.textContent = `Score: ${loggedInUser.score}`;
+  } else {
+    // If no user is logged in, display the sign-in button
+    signInBtn.style.display = 'block';
+    playerDetails.style.display = 'none';
+  }
+}
+
+function openModal() {
+  document.getElementById('signInModal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('signInModal').style.display = 'none';
+}
+
+function signIn() {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  const message = document.getElementById('signInMessage');
+
+  // Simulate sign-in (simple hardcoded logic for demo purposes)
+  if (username === data.name && password === data.password) {
+    message.style.color = 'green';
+    message.textContent = 'Sign in successful!';
+    closeModal();
+    // Optionally, you could update the userScores.json dynamically, if possible
+    alert('Welcome, ' + username + '!');
+    // Call the function to display the player info after sign-in
+    fetch('userScores.json') // Refresh the data
+      .then(response => response.json())
+      .then(data => {
+        checkUserStatus(data);
+      });
+  } else {
+    message.style.color = 'red';
+    message.textContent = 'Invalid username or password!';
+  }
+}
