@@ -10,41 +10,32 @@
   <header>
     <nav>
       <div class="logo">
-        <img src="logo.png" alt="Logo">
+        <img src="Assets/Spelling Bee Logo tranparent.png" alt="Logo">
         <h1>Spelling Bee</h1>
       </div>
-      <button class="sign-in-btn">Sign In</button>
+      <div id="userInfo" class="user-info">
+        <div id="playerDetails" class="player-details">
+          <span id="playerName"></span>
+          <span id="playerScore"></span>
+        </div>
+      </div>
     </nav>
   </header>
 
   <main>
     <h2>Spelling Game</h2>
-    <p>Listen to the word and spell it correctly.</p>
-    <button onclick="playWord()">Play Word</button>
-    <input type="text" id="word-input" placeholder="Type the word">
-    <button onclick="checkSpelling()">Submit</button>
-    <p id="result"></p>
+    <button onclick="playWord()">Hear Word</button>
+    <p id="wordDefinition"></p>
+
+    <form id="guessForm">
+      <label for="guess">Your Guess:</label>
+      <input type="text" id="guess" name="guess">
+      <button type="button" onclick="submitGuess()">Submit</button>
+    </form>
+
+    <p id="gameMessage"></p>
   </main>
 
-  <script>
-    const wordToSpell = "example"; // The word to be spelled (you can dynamically load words)
-
-    function playWord() {
-      // Simulate word playing (replace with real audio for better experience)
-      alert("Playing word: " + wordToSpell);
-    }
-
-    function checkSpelling() {
-      const userInput = document.getElementById('word-input').value;
-      const result = document.getElementById('result');
-      if (userInput.toLowerCase() === wordToSpell.toLowerCase()) {
-        result.textContent = "Correct!";
-        result.style.color = "green";
-      } else {
-        result.textContent = "Try Again!";
-        result.style.color = "red";
-      }
-    }
-  </script>
+  <script src="game1.js"></script>
 </body>
 </html>
