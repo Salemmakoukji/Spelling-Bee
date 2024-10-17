@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 /* Basic styles for the website */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Pacifico", cursive;
   margin: 0;
   padding: 10;
-  background-color: #f4f4f4;
+  background-color: #e7e7e7;
 }
 
 nav {
-  background-color: #333;
+  background-color: #ffcb18;
   color: white;
   padding: 10px;
   display: flex;
@@ -35,8 +37,10 @@ nav h1 {
 }
 
 .user-info label, .user-info input, .user-info span {
-  color: white;
+  color: black;
   margin-left: 10px;
+  border-radius: 50px;
+  border: 0px;
 }
 
 input[type="text"] {
@@ -100,4 +104,9 @@ h2 {
 
 .card a:hover {
   background-color: #1976d2;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
 }
