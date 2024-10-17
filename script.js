@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Simulate fetching user data from a JSON file
-  fetch('userScores.json')
-    .then(response => response.json())
-    .then(data => {
-      // Call the function to check if a user is already logged in
-      checkUserStatus(data);
-    })
-    .catch(error => {
-      console.error('Error loading user data:', error);
-    });
+
 });
 
 function checkUserStatus(data) {
