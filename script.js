@@ -52,7 +52,7 @@ function signIn() {
       const user = data.user;
 
       // Validate the entered username and password
-      if (username === user.name && password === user.password) {
+      if (username === loggedInUser.name && password === loggedInUser.password) {
         message.style.color = 'green';
         message.textContent = 'Sign in successful!';
         closeModal();
