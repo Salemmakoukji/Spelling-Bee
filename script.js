@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('userScores.json')
     .then(response => response.json())
     .then(data => {
+      // Call the function to check if a user is already logged in
       checkUserStatus(data);
     })
     .catch(error => {
@@ -18,7 +19,7 @@ function checkUserStatus(data) {
 
   const loggedInUser = data.user;  // Assuming 'user' contains the logged-in user's info
 
-  if (loggedInUser && loggedInUser.name && loggedInUser.score && loggedInUser.password) {
+  if (loggedInUser && loggedInUser.name && loggedInUser.score) {
     // If user is found in the data, hide sign-in button and display player info
     signInBtn.style.display = 'none';
     playerDetails.style.display = 'flex';
@@ -44,21 +45,35 @@ function signIn() {
   const password = document.getElementById('password').value;
   const message = document.getElementById('signInMessage');
 
-  // Simulate sign-in (simple hardcoded logic for demo purposes)
-  if (username === data.name && password === data.password) {
-    message.style.color = 'green';
-    message.textContent = 'Sign in successful!';
-    closeModal();
-    // Optionally, you could update the userScores.json dynamically, if possible
-    alert('Welcome, ' + username + '!');
-    // Call the function to display the player info after sign-in
-    fetch('userScores.json') // Refresh the data
-      .then(response => response.json())
-      .then(data => {
-        checkUserStatus(data);
-      });
-  } else {
-    message.style.color = 'red';
-    message.textContent = 'Invalid username or password!';
-  }
+  // Fetch user data from JSON
+  fetch('userScores.json')
+    .then(response => response.json())
+    .then(data => {
+      const user = data.user;
+
+      // Validate the entered username and password
+      if (username === user.name && password === user.password) {
+        message.style.color = 'green';
+        message.textContent = 'Sign in successful!';
+        closeModal();
+
+        // Display the player info dynamically
+        const signInBtn = document.getElementById('signInBtn');
+        const playerDetails = document.getElementById('playerDetails');
+        const playerName = document.getElementById('playerName');
+        const playerScore = document.getElementById('playerScore');
+
+        signInBtn.style.display = 'none';
+        playerDetails.style.display = 'flex';
+        playerName.textContent = `Player: ${user.name}`;
+        playerScore.textContent = `Score: ${user.score}`;
+
+      } else {
+        message.style.color = 'red';
+        message.textContent = 'Invalid username or password!';
+      }
+    })
+    .catch(error => {
+      console.error('Error during sign in:', error);
+    });
 }
