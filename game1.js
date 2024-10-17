@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function playWord() {
-  // Fetch a random word from the Words.json file
+  // Fetch a random word from the words.json file
   fetch('words.json')
     .then(response => response.json())
     .then(data => {
