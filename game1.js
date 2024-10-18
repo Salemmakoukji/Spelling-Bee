@@ -1,6 +1,7 @@
 let currentWord = {};
 let userData = JSON.parse(localStorage.getItem('user'));
 
+// Load player name and score on page load
 document.addEventListener('DOMContentLoaded', function () {
   // Set the player name and score from localStorage
   document.getElementById('playerNameInput').value = userData.name;
@@ -8,9 +9,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Listen for changes to the player name input
   document.getElementById('playerNameInput').addEventListener('input', updatePlayerName);
+
+  // Load the first word when the page loads
+  loadNewWord();
 });
 
 function playWord() {
+  // Use Text-to-Speech (TTS) to pronounce the current word
+  const utterance = new SpeechSynthesisUtterance(currentWord.word);
+  window.speechSynthesis.speak(utterance);
+}
+
+function loadNewWord() {
   // Fetch a random word from Words.json
   fetch('Words.json')
     .then(response => response.json())
@@ -18,12 +28,12 @@ function playWord() {
       const randomIndex = Math.floor(Math.random() * data.words.length);
       currentWord = data.words[randomIndex];
 
-      // Use Text-to-Speech (TTS) to speak the word
-      const utterance = new SpeechSynthesisUtterance(currentWord.word);
-      window.speechSynthesis.speak(utterance);
-
-      // Display the definition as a hint
+      // Display the word definition as a hint
       document.getElementById('wordDefinition').textContent = `Definition: ${currentWord.definition}`;
+
+      // Reset game message and guess input
+      document.getElementById('gameMessage').textContent = '';
+      document.getElementById('guess').value = '';
     })
     .catch(error => console.error('Error loading words:', error));
 }
@@ -45,8 +55,8 @@ function submitGuess() {
   // Update the score in localStorage
   updateScore();
 
-  // Clear the input field for the next guess
-  document.getElementById('guess').value = '';
+  // Load a new word for the next round
+  loadNewWord();
 }
 
 function updateScore() {

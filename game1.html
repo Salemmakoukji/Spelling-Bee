@@ -23,16 +23,25 @@
 
   <main>
     <h2>Spelling Game</h2>
-    <button onclick="playWord()">Hear Word</button>
-    <p id="wordDefinition"></p>
+    <div class="card">
+      <h3>Guess the Word</h3>
 
-    <div id="guessForm">
-      <label for="guess">Your Guess:</label>
-      <input type="text" id="guess" name="guess">
-      <button type="button" onclick="submitGuess()">Submit</button>
+      <!-- Word Definition -->
+      <p id="wordDefinition">Definition: </p>
+
+      <!-- Play Word Button -->
+      <button id="playWordButton" onclick="playWord()">Play Word</button>
+
+      <!-- Guess Form -->
+      <form id="guessForm" onsubmit="event.preventDefault(); submitGuess();">
+        <label for="guess">Enter your guess:</label>
+        <input type="text" id="guess" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- Game Message -->
+      <p id="gameMessage"></p>
     </div>
-
-    <p id="gameMessage"></p>
   </main>
 
   <script src="game1.js"></script>
