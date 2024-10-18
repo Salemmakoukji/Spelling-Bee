@@ -15,6 +15,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -23,12 +24,12 @@ nav {
 }
 
 .logo img {
-  height: 50px;
+  height: 70px;
   margin-right: 15px;
 }
 
 nav h1 {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .user-info {
@@ -39,14 +40,16 @@ nav h1 {
 .user-info label, .user-info input, .user-info span {
   color: black;
   margin-left: 10px;
-  border-radius: 50px;
+  border-radius: 10px;
   border: 0px;
 }
 
 input[type="text"] {
-  padding: 5px;
+  padding: 10px;
   margin-right: 10px;
   font-weight: bold;
+  height: 50px;
+  border: 1px solid #ccc;
 }
 
 main {
@@ -80,36 +83,40 @@ h2 {
 }
 
 .card img {
-  width: 100%;
   border-radius: 10px 10px 0 0;
+  width: -webkit-fill-available;
 }
 
 .card h3 {
   margin-top: 15px;
   font-size: 20px;
+  width: -webkit-fill-available;
 }
 
 .card p {
   color: #555;
+  width: -webkit-fill-available;
 }
 
 .card a {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #2196f3;
+  background-color: #001c33;
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  width: -webkit-fill-available;
 }
 
 .card a:hover {
-  background-color: #1976d2;
+  background-color: #001c33cc;
 }
 
 .card img {
   width: 140px;
   height: 140px;
+  width: -webkit-fill-available;
 }
 
 #wordDefinition {
@@ -119,16 +126,17 @@ h2 {
 
 #playWordButton {
   padding: 10px 20px;
-  background-color: #2196f3;
+  background-color: #001c33;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  width: -webkit-fill-available;
 }
 
 #playWordButton:hover {
-  background-color: #1976d2;
+  background-color: #001c33cc;
 }
 
 #guess {
@@ -139,24 +147,27 @@ h2 {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin: 10px;
 }
 
 #guessForm button {
   padding: 10px 20px;
-  background-color: #2196f3;
+  background-color: #001c33;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  width: -webkit-fill-available;
 }
 
 #guessForm button:hover {
-  background-color: #1976d2;
+  background-color: #001c33cc;
 }
 
 #gameMessage {
   margin-top: 20px;
   font-size: 18px;
   color: #333;
+  width: -webkit-fill-available;
 }
