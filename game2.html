@@ -22,17 +22,23 @@
   </header>
 
   <main>
-    <h2>Spelling Game</h2>
-    <button onclick="playWord()">Hear Word</button>
-    <p id="wordDefinition"></p>
+    <h2>Who Am I?</h2>
+    <div class="card">
+      <h3>Guess Who or What I Am</h3>
 
-    <div id="guessForm">
-      <label for="guess">Your Guess:</label>
-      <input type="text" id="guess" name="guess">
-      <button type="button" onclick="submitGuess()">Submit</button>
+      <!-- Clue Text -->
+      <p id="clueText">Clue: </p>
+
+      <!-- Guess Form -->
+      <form id="guessForm" onsubmit="event.preventDefault(); submitGuess();">
+        <label for="guess">Enter your guess:</label>
+        <input type="text" id="guess" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- Game Message -->
+      <p id="gameMessage"></p>
     </div>
-
-    <p id="gameMessage"></p>
   </main>
 
   <script src="game2.js"></script>

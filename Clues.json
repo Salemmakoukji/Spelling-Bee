@@ -1,0 +1,25 @@
+{
+    "clues": [
+      {
+        "clue_id": 1,
+        "clue": "I am a domesticated animal that loves to chase mice. Who am I?",
+        "answer": "cat"
+      },
+      {
+        "clue_id": 2,
+        "clue": "I am known for barking and being man's best friend. What am I?",
+        "answer": "dog"
+      },
+      {
+        "clue_id": 3,
+        "clue": "I am the largest planet in the Solar System. What am I?",
+        "answer": "jupiter"
+      },
+      {
+        "clue_id": 4,
+        "clue": "I am the process by which plants convert sunlight into food. What am I?",
+        "answer": "photosynthesis"
+      }
+    ]
+  }
+  
