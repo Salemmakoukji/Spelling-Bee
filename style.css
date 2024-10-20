@@ -119,8 +119,6 @@ h2 {
 }
 
 .card img {
-  width: 140px;
-  height: 140px;
   width: -webkit-fill-available;
 }
 
