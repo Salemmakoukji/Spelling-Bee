@@ -18,7 +18,12 @@
       </div>
       <div id="userInfo" class="user-info">
         <input type="text" id="playerNameInput" placeholder="Player Name" oninput="updatePlayerName()">
-        <span id="playerScore"></span>
+        <span id="playerScore" onmouseover="showScoreDetails()" onmouseout="hideScoreDetails()">Score: 0</span>
+
+        <!-- Tooltip for score breakdown -->
+        <div id="scoreBreakdown" class="tooltip">
+            <!-- Score details will be populated here -->
+        </div>
       </div>
     </nav>
   </header>
