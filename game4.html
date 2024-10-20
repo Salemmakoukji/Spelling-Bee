@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spelling Bee Games</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="Assets/Spelling Bee Logo tranparent.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="Assets/Spelling Bee Logo tranparent.png" alt="Logo"/></a>
+        <h1>Spelling Bee</h1>
+      </div>
+      <div id="userInfo" class="user-info">
+        <input type="text" id="playerNameInput" placeholder="Player Name" oninput="updatePlayerName()">
+        <span id="playerScore"></span>
+      </div>
+    </nav>
+  </header>
+
+  <div class="game-container">
+    <div class="card">
+        <h3>What is it?</h3>
+        
+        <!-- Image to Guess -->
+        <div id="imageContainer">
+            <img id="guessImage" src="images/image1.png" alt="Guess the image">
+        </div>
+        
+        <!-- Input for Guess -->
+        <label for="guessInput">Your Guess:</label>
+        <input type="text" id="guessInput" placeholder="Type your guess here">
+        <button id="submitGuessButton" onclick="submitGuess()">Submit</button>
+        
+        <!-- Game Feedback -->
+        <p id="gameMessage"></p>
+        
+        <!-- Reset Button -->
+        <button id="resetButton" onclick="resetGame()">Next Image</button>
+    </div>
+</div>
+
+<script src="game4.js"></script>
+</body>
+</html>

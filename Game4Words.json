@@ -1,0 +1,29 @@
+{
+    "words": [
+      { "word": "apple", "imagePath": "images/apple.png" },
+      { "word": "banana", "imagePath": "images/banana.png" },
+      { "word": "cat", "imagePath": "images/cat.png" },
+      { "word": "dog", "imagePath": "images/dog.png" },
+      { "word": "elephant", "imagePath": "images/elephant.png" },
+      { "word": "guitar", "imagePath": "images/guitar.png" },
+      { "word": "house", "imagePath": "images/house.png" },
+      { "word": "icecream", "imagePath": "images/icecream.png" },
+      { "word": "jellyfish", "imagePath": "images/jellyfish.png" },
+      { "word": "kite", "imagePath": "images/kite.png" },
+      { "word": "lion", "imagePath": "images/lion.png" },
+      { "word": "mountain", "imagePath": "images/mountain.png" },
+      { "word": "notebook", "imagePath": "images/notebook.png" },
+      { "word": "owl", "imagePath": "images/owl.png" },
+      { "word": "pencil", "imagePath": "images/pencil.png" },
+      { "word": "queen", "imagePath": "images/queen.png" },
+      { "word": "rainbow", "imagePath": "images/rainbow.png" },
+      { "word": "sun", "imagePath": "images/sun.png" },
+      { "word": "tree", "imagePath": "images/tree.png" },
+      { "word": "umbrella", "imagePath": "images/umbrella.png" },
+      { "word": "violin", "imagePath": "images/violin.png" },
+      { "word": "whale", "imagePath": "images/whale.png" },
+      { "word": "xylophone", "imagePath": "images/xylophone.png" },
+      { "word": "zebra", "imagePath": "images/zebra.png" }
+    ]
+  }
+  
