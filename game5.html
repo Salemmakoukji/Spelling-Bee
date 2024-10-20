@@ -27,31 +27,30 @@
       </div>
     </nav>
   </header>
-
   <main>
     <div class="game-container">
       <div class="card">
-        <h3>What is it?</h3>
-
-        <!-- Image to Guess -->
-        <div id="imageContainer">
-          <img id="guessImage" src="images/cat.png" alt="Guess the image">
-        </div>
-
-        <!-- Input for Guess -->
-        <label for="guessInput">Your Guess:</label>
-        <input type="text" id="guessInput" placeholder="Type your guess here">
-        <button id="guessButton" onclick="submitGuess()">Submit</button>
-
-        <!-- Game Feedback -->
-        <p id="gameMessage"></p>
-
-        <!-- Reset Button -->
-        <button id="resetButton" onclick="resetGame()">Next Image</button>
+          <h3>Missing Letters</h3>
+          
+          <!-- Word with Missing Letters -->
+          <div id="missingWordContainer">
+              <p id="missingWord"></p>
+          </div>
+          
+          <!-- Input for Guess -->
+          <label for="letterGuessInput">Fill in the missing letters:</label>
+          <input type="text" id="letterGuessInput" placeholder="Enter missing letters here" maxlength="5">
+          <button id="submitGuessButton" onclick="submitGuess()">Submit</button>
+          
+          <!-- Game Feedback -->
+          <p id="gameMessage"></p>
+          
+          <!-- Reset Button -->
+          <button id="resetButton" onclick="resetGame()">Next Word</button>
       </div>
-    </div>
+  </div>
   </main>
-  <script src="game4.js"></script>
+  <script src="game5.js"></script>
 </body>
 
 </html>
