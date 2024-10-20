@@ -204,6 +204,7 @@ h2 {
   font-size: 16px;
   width: 40px;
   text-align: center;
+  width: -webkit-fill-available;
 }
 
 #guessButton, #resetButton {
@@ -219,4 +220,5 @@ h2 {
 
 #guessButton:hover, #resetButton:hover {
   background-color: #001c33cc;
+  width: -webkit-fill-available;
 }
