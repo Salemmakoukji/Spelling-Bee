@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spelling Bee Games</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="Assets/Spelling Bee Logo tranparent.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="Assets/Spelling Bee Logo tranparent.png" alt="Logo"/></a>
+        <h1>Spelling Bee</h1>
+      </div>
+      <div id="userInfo" class="user-info">
+        <input type="text" id="playerNameInput" placeholder="Player Name" oninput="updatePlayerName()">
+        <span id="playerScore"></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Hangman Game</h2>
+    <div class="card">
+      <h3>Guess the Word</h3>
+
+      <!-- Hangman Image -->
+      <div id="hangmanImage"></div>
+
+      <!-- Hidden Word -->
+      <p id="hiddenWord">_ _ _ _</p>
+
+      <!-- Input for Guessing a Letter -->
+      <label for="letterGuess">Guess a letter:</label>
+      <input type="text" id="letterGuess" maxlength="1">
+      <button id="guessButton" onclick="submitGuess()">Guess</button>
+
+      <!-- Game Message -->
+      <p id="gameMessage"></p>
+
+      <!-- Incorrect Guesses -->
+      <p id="incorrectGuesses">Incorrect guesses: </p>
+
+      <!-- Reset Button -->
+      <button id="resetButton" onclick="resetGame()">Reset Game</button>
+    </div>
+  </main>
+
+  <script src="game3.js"></script>
+</body>
+</html>

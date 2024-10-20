@@ -176,3 +176,46 @@ h2 {
   color: #333;
   width: -webkit-fill-available;
 }
+
+/* Hangman Image Placeholder */
+#hangmanImage {
+  height: 200px;
+  width: 150px;
+  background-color: #f0f0f0;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* Hidden Word Display */
+#hiddenWord {
+  font-size: 24px;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+/* Incorrect Guesses Styling */
+#incorrectGuesses {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#letterGuess {
+  padding: 10px;
+  font-size: 16px;
+  width: 40px;
+  text-align: center;
+}
+
+#guessButton, #resetButton {
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#guessButton:hover, #resetButton:hover {
+  background-color: #1976d2;
+}
