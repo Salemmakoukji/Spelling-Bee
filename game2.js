@@ -84,11 +84,11 @@ function submitGuess() {
 
   if (userGuess === currentClue.answer.toLowerCase()) {
     // Correct guess, add 10 points
-    updateGameScore('whoam', 10);
+    updateGameScore('whoami', 10);
     messageElement.textContent = 'Correct! You earned 10 points.';
   } else {
     // Incorrect guess, subtract 5 points
-    updateGameScore('whoam', -5);
+    updateGameScore('whoami', -5);
     messageElement.textContent = `Incorrect! The correct answer was "${currentClue.answer}". You lost 5 points.`;
   }
 
