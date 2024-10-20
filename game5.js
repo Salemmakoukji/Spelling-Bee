@@ -1,35 +1,63 @@
 let wordIndex = 0;
 let correctWord = '';
 let maskedWord = '';
-let userData = JSON.parse(localStorage.getItem('user')) || { 
-    name: "Player", 
-    score: 0, 
-    gameScores: {
-        spellingGame: 0,
-        whoAmI: 0,
-        hangman: 0,
-        whatIsIt: 0,
-        missingLetters: 0,
-        tenWords: 0
-    }
-};
+let userData = JSON.parse(localStorage.getItem('user')) || { name: "Player", score: 0, gameScores: {} };
 
-// Load the player name and score when the page loads
+// Load player name and total score on page load
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('playerNameInput').value = userData.name;
     document.getElementById('playerScore').textContent = `Score: ${userData.score}`;
     document.getElementById('playerNameInput').addEventListener('input', updatePlayerName);
-
-    // Display individual game scores in the tooltip
-    document.getElementById('spellingScore').textContent = userData.gameScores.spellingGame;
-    document.getElementById('whoAmIScore').textContent = userData.gameScores.whoAmI;
-    document.getElementById('hangmanScore').textContent = userData.gameScores.hangman;
-    document.getElementById('whatIsItScore').textContent = userData.gameScores.whatIsIt;
-    document.getElementById('missingLettersScore').textContent = userData.gameScores.missingLetters;
-    document.getElementById('tenWordsScore').textContent = userData.gameScores.tenWords;
-
     loadNewWord();
 });
+
+// Function to show score breakdown
+function showScoreDetails() {
+    const scoreBreakdownDiv = document.getElementById('scoreBreakdown');
+    const gameScores = userData.gameScores || {};
+
+    let scoreDetails = '<strong>Game Scores:</strong><br>';
+    scoreDetails += `Spelling Game: ${gameScores.spelling || 0} points<br>`;
+    scoreDetails += `Who Am I?: ${gameScores.whoami || 0} points<br>`;
+    scoreDetails += `Hangman: ${gameScores.hangman || 0} points<br>`;
+    scoreDetails += `What Is It?: ${gameScores.whatisit || 0} points<br>`;
+    scoreDetails += `Missing Letters: ${gameScores.missingletters || 0} points<br>`;
+    scoreDetails += `10 Words: ${gameScores.tenwords || 0} points`;
+
+    scoreBreakdownDiv.innerHTML = scoreDetails;
+    scoreBreakdownDiv.classList.add('tooltip-visible');
+}
+
+// Function to hide score breakdown
+function hideScoreDetails() {
+    const scoreBreakdownDiv = document.getElementById('scoreBreakdown');
+    scoreBreakdownDiv.classList.remove('tooltip-visible');
+}
+
+// Function to update player name
+function updatePlayerName() {
+    userData.name = document.getElementById('playerNameInput').value;
+    localStorage.setItem('user', JSON.stringify(userData));
+}
+
+// Example function for a game to update the score
+function updateGameScore(game, points) {
+    if (!userData.gameScores) {
+        userData.gameScores = {};
+    }
+    if (!userData.gameScores[game]) {
+        userData.gameScores[game] = 0;
+    }
+    userData.gameScores[game] += points;
+    userData.score += points;
+
+    // Update total score display
+    document.getElementById('playerScore').textContent = `Score: ${userData.score}`;
+
+    // Save updated user data to localStorage
+    localStorage.setItem('user', JSON.stringify(userData));
+}
+
 
 // Function to load a new word with missing letters
 function loadNewWord() {
