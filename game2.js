@@ -86,18 +86,12 @@ function submitGuess() {
     // Correct guess, add 10 points
     updateGameScore('whoami', 10);
     messageElement.textContent = 'Correct! You earned 10 points.';
-    updateScore();
   } else {
     // Incorrect guess, subtract 10 points
     updateGameScore('whoami', -10);
     messageElement.textContent = `Incorrect! The correct answer was "${currentClue.answer}". You lost 10 points.`;
-    updateScore();
   }
-
-  // Update the score in localStorage
   updateScore();
-
-  // Load a new clue for the next round
   loadNewClue();
 }
 

@@ -99,6 +99,7 @@ function submitGuess() {
     }
 
     updateScore();
+    loadNewImage();
 }
 
 // Function to update the player's score and save it in localStorage

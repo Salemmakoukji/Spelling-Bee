@@ -112,6 +112,7 @@ function finalizeScore(correctWords) {
     }
 
     updateScore();
+    resetGame();
 }
 
 // Function to update the player's score and save it in localStorage

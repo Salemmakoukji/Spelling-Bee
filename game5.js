@@ -115,6 +115,7 @@ function submitGuess() {
     }
 
     updateScore();
+    loadNewWord();
 }
 
 // Function to update the player's score and save it in localStorage
