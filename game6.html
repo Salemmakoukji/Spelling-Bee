@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spelling Bee Games</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="Assets/Spelling Bee Logo tranparent.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="Assets/Spelling Bee Logo tranparent.png" alt="Logo"/></a>
+        <h1>Spelling Bee</h1>
+      </div>
+      <div id="userInfo" class="user-info">
+        <input type="text" id="playerNameInput" placeholder="Player Name" oninput="updatePlayerName()">
+        <span id="playerScore" onmouseover="showScoreDetails()" onmouseout="hideScoreDetails()">Score: 0</span>
+
+        <!-- Tooltip for score breakdown -->
+        <div id="scoreBreakdown" class="tooltip">
+            <!-- Score details will be populated here -->
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="game-container">
+        <div class="card">
+            <h3>10 Words</h3>
+
+            <!-- Random Letter Display -->
+            <div id="randomLetterContainer">
+                <p id="randomLetter"></p>
+            </div>
+
+            <!-- Input for Words -->
+            <label for="wordInput">Enter 10 words starting with the letter:</label>
+            <div id="wordInputs">
+                <input type="text" class="wordInput" id="word1" placeholder="Word 1">
+                <input type="text" class="wordInput" id="word2" placeholder="Word 2">
+                <input type="text" class="wordInput" id="word3" placeholder="Word 3">
+                <input type="text" class="wordInput" id="word4" placeholder="Word 4">
+                <input type="text" class="wordInput" id="word5" placeholder="Word 5">
+                <input type="text" class="wordInput" id="word6" placeholder="Word 6">
+                <input type="text" class="wordInput" id="word7" placeholder="Word 7">
+                <input type="text" class="wordInput" id="word8" placeholder="Word 8">
+                <input type="text" class="wordInput" id="word9" placeholder="Word 9">
+                <input type="text" class="wordInput" id="word10" placeholder="Word 10">
+            </div>
+            <button id="submitWordsButton" onclick="submitWords()">Submit</button>
+            
+            <!-- Game Feedback -->
+            <p id="gameMessage"></p>
+            
+            <!-- Reset Button -->
+            <button id="resetButton" onclick="resetGame()">New Letter</button>
+        </div>
+    </div>
+</main>
+
+<script src="game6.js"></script>
+</body>
+</html>

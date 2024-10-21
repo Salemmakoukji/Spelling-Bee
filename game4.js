@@ -92,11 +92,9 @@ function submitGuess() {
 
     if (guess === correctWord) {
         document.getElementById('gameMessage').textContent = 'Correct! +10 points';
-        score += 10;
         updateGameScore('whatisit', 10);
     } else {
-        document.getElementById('gameMessage').textContent = `Incorrect! The correct word was "${correctWord}". -5 points`;
-        score -= 10;
+        document.getElementById('gameMessage').textContent = `Incorrect! The correct word was "${correctWord}". -10 points`;
         updateGameScore('whatisit', -10);
     }
 

@@ -112,12 +112,12 @@ function updateHangmanImage() {
 
 function checkGameStatus() {
   if (hiddenWordArray.join('') === selectedWord) {
-    document.getElementById('gameMessage').textContent = 'You won! +20 points';
-    updateGameScore('hangman', 20);
+    document.getElementById('gameMessage').textContent = 'You won! +10 points';
+    updateGameScore('hangman', 10);
     updateScore();
   } else if (incorrectGuesses.length >= 6) {
     document.getElementById('gameMessage').textContent = `You lost! The word was "${selectedWord}". -10 points`;
-    updateGameScore('hangman', -20);
+    updateGameScore('hangman', -10);
     updateScore();
   }
 }

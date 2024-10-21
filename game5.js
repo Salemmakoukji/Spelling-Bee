@@ -88,7 +88,7 @@ function maskWord(word) {
 
     missingLetterIndices.forEach(index => {
         if (index < word.length) {
-            masked[index] = '_';
+            masked[index] = '▢';
         }
     });
 
@@ -104,16 +104,14 @@ function submitGuess() {
     }
 
     // Compare the player's guess with the correct missing letters
-    const correctLetters = correctWord.split('').filter((letter, index) => maskedWord[index] === '_').join('');
+    const correctLetters = correctWord.split('').filter((letter, index) => maskedWord[index] === '▢').join('');
     
     if (guess === correctLetters) {
         document.getElementById('gameMessage').textContent = 'Correct! +10 points';
-        userData.score += 10;
-        userData.gameScores.missingLetters += 10;
+        updateGameScore('missingletters', 10);
     } else {
-        document.getElementById('gameMessage').textContent = `Incorrect! The correct word was "${correctWord}". -5 points`;
-        userData.score -= 5;
-        userData.gameScores.missingLetters -= 5;
+        document.getElementById('gameMessage').textContent = `Incorrect! The correct word was "${correctWord}". -10 points`;
+        updateGameScore('missingletters', -10);
     }
 
     updateScore();

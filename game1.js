@@ -92,10 +92,12 @@ function submitGuess() {
     // Correct guess, add 10 points
     updateGameScore('spelling', 10);
     messageElement.textContent = 'Correct! You earned 10 points.';
+    updateScore();
   } else {
-    // Incorrect guess, subtract 5 points
-    updateGameScore('spelling', -5);
-    messageElement.textContent = `Incorrect! The correct word was "${currentWord.word}". You lost 5 points.`;
+    // Incorrect guess, subtract 10 points
+    updateGameScore('spelling', -10);
+    messageElement.textContent = `Incorrect! The correct word was "${currentWord.word}". You lost 10 points.`;
+    updateScore();
   }
 
   // Update the score in localStorage
