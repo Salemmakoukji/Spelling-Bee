@@ -108,7 +108,7 @@ function finalizeScore(correctWords) {
     } else {
         const pointsEarned = correctWords * 1;
         document.getElementById('gameMessage').textContent = `${correctWords} out of 10 words are correct! +${pointsEarned} points`;
-        updateGameScore('tenwords', -1 * correctWords);
+        updateGameScore('tenwords',correctWords);
     }
 
     updateScore();
