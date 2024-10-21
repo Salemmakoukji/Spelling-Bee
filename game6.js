@@ -104,7 +104,7 @@ function submitWords() {
 function finalizeScore(correctWords) {
     if (correctWords === 10) {
         document.getElementById('gameMessage').textContent = 'All words are correct! +10 points';
-        updateGameScore('tenwords', -10);
+        updateGameScore('tenwords', +10);
     } else {
         const pointsEarned = correctWords * 1;
         document.getElementById('gameMessage').textContent = `${correctWords} out of 10 words are correct! +${pointsEarned} points`;
